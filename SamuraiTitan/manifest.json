@@ -1,7 +1,8 @@
 {
     "name": "SamuraiTitan",
-    "version_number": "0.1.0",
-    "description": "Custom Titan equipped with a broadsword, sword core and multipurpose ability mounts.",
+    "version_number": "0.1.2",
+    "website_url": "https://github.com/Legandy/SamuraiTitan",
+    "description": "Vanguard Titan equipped with a broadsword, sword core and multipurpose ability mounts.",
     "dependencies": 
     [
         "northstar-Northstar-1.14.2",

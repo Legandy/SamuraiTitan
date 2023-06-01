@@ -1,29 +1,33 @@
 {
 	"Name": "SamuraiTitan",
-	"Description": "Custom Titan equipped with a broadsword, sword core and multipurpose ability mounts.",
+	"Description": "Vanguard Titan equipped with a broadsword, sword core and multipurpose ability mounts.",
 	"LoadPriority": 5,
 	"RequiredOnClient": true,
-	"Version": "0.1.0",
+	"Version": "0.1.2",
 	"Scripts": 
 	[
 		{
 			"Path": "Samurai_CreateTitan.gnut",
 			"RunOn": "UI || SERVER || CLIENT",
-			"ServerCallback": {
+			"ServerCallback": 
+			{
 				"After": "SamuraiSetup"
             },
 			
-			"ClientCallback": {
+			"ClientCallback": 
+			{
 				"After": "SamuraiSetup"
 			},
-			"UICallback": {
+			"UICallback": 
+			{
 				"After": "SamuraiSetup"
 			}
 		},
 		{
 			"Path": "Samurai_OnSpawn.gnut",
 			"RunOn": "SERVER",
-            "ServerCallback": {
+            "ServerCallback": 
+			{
 				"After": "SamuraiCallbacks"
             }
 		}

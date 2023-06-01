@@ -82,7 +82,7 @@ Select your Titan within the additional 3 Titan slots provided by `Peepee.TitanF
 ## Bugs
 - Multi Target Missiles has wrong icon (the image path for right one doesn't work)
 - Aegis Upgrades have wrong icons (don't know the right image paths)
-- Could not implent Rearm because the game chrashes when used with non Monarch abilities (not sure why)
+- Could not implement Rearm because the game chrashes when used with non Monarch abilities (not sure why)
 
 
 ## Patch Notes
