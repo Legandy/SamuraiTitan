@@ -1,4 +1,5 @@
 # Samurai Titan
+![icon](https://github.com/Legandy/SamuraiTitan/assets/37513978/affceedd-9bc5-4dd8-ade9-3c69d1b66b38)
 
 **Required by Server and Client**
 
