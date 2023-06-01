@@ -34,7 +34,7 @@ Select your Titan within the additional 3 Titan slots provided by `Peepee.TitanF
 *Utility Mount:*
 - PhaseDash
 - Energy Siphon
-- Incendiary Trap
+- Tether Trap
 
 
 ### Titan Kit
@@ -80,9 +80,9 @@ Select your Titan within the additional 3 Titan slots provided by `Peepee.TitanF
 
 
 ## Bugs
-- Multi Target Missiles has wrong icon (the right one doesn't work)
+- Multi Target Missiles has wrong icon (the image path for right one doesn't work)
 - Aegis Upgrades have wrong icons (don't know the right image paths)
-- Could not implent Rearm because the game chrashes when used with non Monarch abilities (don't know why)
+- Could not implent Rearm because the game chrashes when used with non Monarch abilities (not sure why)
 
 
 ## Patch Notes
