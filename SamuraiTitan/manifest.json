@@ -1,0 +1,10 @@
+{
+    "name": "SamuraiTitan",
+    "version_number": "0.1.0",
+    "description": "Custom Titan equipped with a broadsword, sword core and multipurpose ability mounts.",
+    "dependencies": 
+    [
+        "northstar-Northstar-1.14.2",
+        "The_Peepeepoopoo_man-Titanframework-1.2.3"
+    ]
+}
