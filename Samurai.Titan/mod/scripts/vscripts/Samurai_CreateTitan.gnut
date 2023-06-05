@@ -1,0 +1,326 @@
+global function SamuraiSetup
+void function SamuraiSetup()
+{
+    ModdedTitanData Samurai
+    Samurai.Name = "#DEFAULT_TITAN_SAMURAI"
+	Samurai.Tag = "Atlas"
+    Samurai.Description = "#TITAN_LOADOUT_DESC_SAMURAI"
+    Samurai.BaseSetFile = "titan_atlas_vanguard"
+    Samurai.BaseName = "vanguard"
+	Samurai.difficulty = 2
+	Samurai.speedStat = 3
+	Samurai.damageStat = 2
+	Samurai.healthStat = 2
+	Samurai.Voice = "titanos_bt"
+	Samurai.passiveDisplayNameOverride = "#TITAN_SAMURAI_PASSIVE_TITLE"
+	//Samurai.ExecutionType =
+	//Samurai.icon = $"samurai/hud/samurai_icon_medium"
+	//Samurai.Role = "#FD_ROLE_SAMURAI"
+	/*
+	Samurai.groupSettings.Name = "#SAMURAICATEGORY"
+	Samurai.groupSettings.showTagAsSuffix = true
+	Samurai.groupSettings.showName = false
+	*/
+    Samurai.titanHints = 
+    [
+		"#TITAN_HINT_SAMURAI_001"
+		"#TITAN_HINT_SAMURAI_002"
+		"#TITAN_HINT_SAMURAI_003"
+		"#TITAN_HINT_SAMURAI_004"
+		"#TITAN_HINT_SAMURAI_005"
+		"#TITAN_HINT_SAMURAI_006"
+		"#TITAN_HINT_SAMURAI_007"
+		"#TITAN_HINT_SAMURAI_008"
+		"#TITAN_HINT_SAMURAI_009"
+		"#TITAN_HINT_SAMURAI_010"
+    ]
+
+	//==================================================//DEFINING WEAPON//==================================================//
+    ModdedTitanWeaponAbilityData Primary
+    Primary.weaponName = "mp_titanweapon_xo16_vanguard"
+    Samurai.Primary = Primary
+
+
+	//==================================================//DEFINING MELEE//==================================================//
+    Samurai.Melee = "melee_titan_sword"
+
+
+	//==================================================//CORE ABILITY//==================================================//
+	ModdedTitanWeaponAbilityData Core
+    Core.weaponName = "mp_titancore_shift_core"
+    Samurai.Core = Core
+
+
+	//==================================================//CREATING CUSTOM TITAN KIT (PASSIVE 2)//==================================================//
+	//WORKS
+	/*
+	ModdedPassiveData EnergyThief
+	EnergyThief.Name = "#GEAR_VANGUARD_ENERGYTHIEF"
+	EnergyThief.description = "#GEAR_VANGUARD_ENERGYTHIEF_LONGDESC"
+	EnergyThief.image = $"ui/temp"
+	EnergyThief.customIcon = false
+	Samurai.passive2Array.append(EnergyThief)
+
+	ModdedPassiveData Highlander
+	Highlander.Name = "#GEAR_RONIN_HIGHLANDER"
+	Highlander.description = "#GEAR_RONIN_HIGHLANDER_LONGDESC"
+	Highlander.image = $"r2_ui/menus/loadout_icons/titan_weapon/titan_weapon_sword"
+	Highlander.customIcon = false
+	Samurai.passive2Array.append(Highlander)
+	
+	ModdedPassiveData TemporalAnomaly
+	TemporalAnomaly.Name = "#GEAR_RONIN_TEMPORALANOMALY"
+	TemporalAnomaly.description = "#GEAR_RONIN_TEMPORALANOMALY_LONGDESC"
+	TemporalAnomaly.image = $"rui/titan_loadout/tactical/titan_tactical_phase_dash_menu"
+	TemporalAnomaly.customIcon = false
+	Samurai.passive2Array.append(TemporalAnomaly)
+
+	ModdedPassiveData Thunderstorm
+	Thunderstorm.Name = "#GEAR_RONIN_THUNDERSTORM"
+	Thunderstorm.description = "#GEAR_RONIN_THUNDERSTORM_LONGDESC"
+	Thunderstorm.image = $"rui/titan_loadout/ordnance/arc_wave_menu"
+	Thunderstorm.customIcon = false
+	Samurai.passive2Array.append(Thunderstorm)
+	*/
+
+
+	//==================================================//CREATING MULTIPURPOSE MOUNTS (PASSIVE 4,5,6)//==================================================//
+	
+	ModdedTitanWeaponAbilityData GenericDefensiveMount
+	GenericDefensiveMount.custom = true
+	GenericDefensiveMount.scriptHandled = true
+	GenericDefensiveMount.displayName = "Defensive Mount"
+	GenericDefensiveMount.weaponName = "GenericDefensiveMount"
+	GenericDefensiveMount.description = "Choose your Defense"
+	Samurai.Left = GenericDefensiveMount
+
+	ModdedTitanWeaponAbilityData GenericOffensiveMount
+	GenericOffensiveMount.custom = true
+	GenericOffensiveMount.scriptHandled = true
+	GenericOffensiveMount.displayName = "Offensive Mount"
+	GenericOffensiveMount.weaponName = "GenericOffensiveMount"
+	GenericOffensiveMount.description = "Choose your Offense"
+	Samurai.Right = GenericOffensiveMount
+
+	ModdedTitanWeaponAbilityData GenricUtilityMount
+	GenricUtilityMount.custom = true
+	GenricUtilityMount.scriptHandled = true
+	GenricUtilityMount.displayName = "Utility Mount"
+	GenricUtilityMount.weaponName = "GenricUtilityMount"
+	GenricUtilityMount.description = "Choose your Utility"
+	Samurai.Mid = GenricUtilityMount
+	
+	/*
+	//For testing without multipurpose mounts
+	ModdedTitanWeaponAbilityData Offensive
+    Offensive.weaponName = "mp_titanweapon_arc_wave"
+    Samurai.Right = Offensive
+    
+    ModdedTitanWeaponAbilityData Defensive
+    Defensive.weaponName = "mp_titanability_basic_block"
+    Samurai.Left = Defensive
+
+    ModdedTitanWeaponAbilityData Util
+    Util.weaponName = "mp_titanability_phase_dash"
+    Samurai.Mid = Util
+    */
+
+
+	//==================================================//MULTIPURPOSE MOUNTS (PASSIVE 4,5,6)//==================================================//
+    //Passive 4 (left), Passive 5 (right) and Passive 6 (middle) are the abilities
+	//More than 3 abilities each results in index error
+
+    //==================================================//OFFENSE (PASSIVE 6, RIGHT)//==================================================//
+	
+	ModdedPassiveData ArcWave
+	ArcWave.Name = "#WPN_TITAN_ARC_WAVE"
+	ArcWave.description = "WPN_TITAN_ARC_WAVE_DESC"
+	ArcWave.image = $"rui/titan_loadout/ordnance/arc_wave_menu"
+	Samurai.passive6Array.append(ArcWave)
+
+	ModdedPassiveData ShoulderRockets
+	ShoulderRockets.Name = "#WPN_TITAN_SHOULDER_ROCKETS"
+	ShoulderRockets.description = "#WPN_TITAN_SHOULDER_ROCKETS_DESC"
+	//ShoulderRockets.image = $"rui/titan_loadout/ordnance/multilock_rockets_menu"
+	ShoulderRockets.image = $"rui/titan_loadout/ordnance/tracking_rockets_menu"
+	Samurai.passive6Array.append(ShoulderRockets)
+
+	ModdedPassiveData Laser
+	Laser.Name = "#WPN_TITAN_LASER_LITE"
+	Laser.description = "WPN_TITAN_LASER_LITE_DESC"
+	Laser.image = $"rui/titan_loadout/ordnance/laser_shot_menu"
+	Samurai.passive6Array.append(Laser)
+
+	
+
+	/*
+	ModdedPassiveData ClusterMissile
+	ClusterMissile.Name = "#WPN_TITAN_SALVO_ROCKETS"
+	ClusterMissile.description = "WPN_TITAN_SALVO_ROCKETS_DESC"
+	//ClusterMissile.image = $"rui/titan_loadout/ordnance/cluster_missile_menu"
+	ClusterMissile.image = $"rui/titan_loadout/ordnance/tracking_rockets_menu"
+	Samurai.passive6Array.append(ClusterMissile)
+	*/
+
+	
+    //==================================================//DEFENSE (PASSIVE 4, LEFT)//==================================================//
+    
+	ModdedPassiveData SwordBlock
+	SwordBlock.Name = "#WPN_TITAN_BASIC_BLOCK"
+	SwordBlock.description = "#WPN_TITAN_BASIC_BLOCK_DESC"
+	SwordBlock.image = $"rui/titan_loadout/defensive/titan_defensive_sword_block_menu"
+	Samurai.passive4Array.append(SwordBlock)
+
+	ModdedPassiveData Siphon
+	Siphon.Name = "#WPN_TITAN_STUN_LASER"
+	Siphon.description = "WPN_TITAN_STUN_LASER_DESC"
+	Siphon.image = $"rui/titan_loadout/defensive/titan_defensive_energy_siphon_menu"
+	Samurai.passive4Array.append(Siphon)
+
+	ModdedPassiveData VortexShield
+	VortexShield.Name = "#WPN_TITAN_VORTEX_SHIELD"
+	VortexShield.description = "WPN_TITAN_VORTEX_SHIELD_DESC"
+	VortexShield.image = $"rui/titan_loadout/defensive/titan_defensive_vortex_menu"
+	Samurai.passive4Array.append(VortexShield)
+	/*
+	ModdedPassiveData HeatShield
+	HeatShield.Name = "#WPN_TITAN_HEAT_SHIELD"
+	HeatShield.description = "#WPN_TITAN_HEAT_SHIELD_DESC"
+	HeatShield.image = $"rui/titan_loadout/defensive/titan_defensive_heat_shield_menu"
+	Samurai.passive4Array.append(HeatShield)
+	*/
+
+	//==================================================//UTILITY (PASSIVE 5, MIDDLE)//==================================================//
+	
+	ModdedPassiveData PhaseDash
+	PhaseDash.Name = "#WPN_TITAN_PHASE_DASH"
+	PhaseDash.description = "WPN_TITAN_PHASE_DASH_DESC"
+	PhaseDash.image = $"rui/titan_loadout/tactical/titan_tactical_phase_dash_menu"
+	Samurai.passive5Array.append(PhaseDash)
+
+	//Game chrashes when used with non Monarch abilities
+	ModdedPassiveData Rearm
+	Rearm.Name = "#WPN_TITANABILITY_REARM"
+	Rearm.description = "#WPN_TITANABILITY_REARM_DESC"
+	Rearm.image = $"rui/titan_loadout/tactical/titan_tactical_rearm_menu"
+	Samurai.passive5Array.append(Rearm)
+	/*
+	ModdedPassiveData TetherTrap
+	TetherTrap.Name = "#WPN_TITAN_TETHER_TRAP"
+	TetherTrap.description = "WPN_TITAN_TETHER_TRAP_DESC"
+	TetherTrap.image = $"rui/titan_loadout/ordnance/tether_menu"
+	Samurai.passive5Array.append(TetherTrap)
+	*/
+	/*
+	ModdedPassiveData Hover
+	Hover.Name = "#WPN_TITAN_HOVER"
+	Hover.description = "WPN_TITAN_HOVER_DESC"
+	Hover.image = $"rui/titan_loadout/tactical/titan_tactical_hover_menu"
+	Samurai.passive5Array.append(Hover)
+	*/
+	/*
+	ModdedPassiveData Siphon
+	Siphon.Name = "#WPN_TITAN_STUN_LASER"
+	Siphon.description = "WPN_TITAN_STUN_LASER_DESC"
+	Siphon.image = $"rui/titan_loadout/defensive/titan_defensive_energy_siphon_menu"
+	Samurai.passive5Array.append(Siphon)
+	*/
+	
+
+	//==================================================//AEGIS UPGRADES//==================================================//
+	
+	//RANK 1: Sword Mastery
+	ModdedPassiveData SwordMastery
+	SwordMastery.Name = "#FD_UPGRADE_SAMURAI_WEAPON_TIER_1"
+	SwordMastery.description = "#FD_UPGRADE_SAMURAI_WEAPON_TIER_1_DESC"
+	SwordMastery.image = $"r2_ui/menus/loadout_icons/titan_weapon/titan_weapon_sword"
+	//SwordMastery.image = $"rui/menu/fd_menu/upgrade_ronin_weapon_tier_1"
+	//SwordMastery.image = $"rui/menu/fd_menu/upgrade_ronin_sword_upgrade"
+	SwordMastery.customIcon = false
+	Samurai.passiveFDArray.append(SwordMastery)
+	
+	
+	//RANK 2: Chassis Upgrade
+	ModdedPassiveData ChassisUpgrade
+	ChassisUpgrade.Name = "#FD_UPGRADE_SAMURAI_DEFENSE_TIER_1"
+	ChassisUpgrade.description = "#FD_UPGRADE_SAMURAI_DEFENSE_TIER_1_DESC"
+	ChassisUpgrade.image = $"rui/menu/fd_menu/upgrade_monarch_chassis"
+	ChassisUpgrade.customIcon = false
+	Samurai.passiveFDArray.append(ChassisUpgrade)
+	
+	
+	//RANK 3: Ghost In TheMachine
+	ModdedPassiveData GhostInTheMachine
+	GhostInTheMachine.Name = "#FD_UPGRADE_SAMURAI_UTILITY_TIER_1"
+	GhostInTheMachine.description = "#FD_UPGRADE_SAMURAI_UTILITY_TIER_1_DESC"
+	GhostInTheMachine.image = $"rui/titan_loadout/tactical/titan_tactical_phase_dash_menu"
+	//GhostInTheMachine.image = $"rui/menu/fd_menu/upgrade_ronin_utility_tier_1"
+	//GhostInTheMachine.image = $"rui/menu/fd_menu/upgrade_ronin_phase_charges"
+	GhostInTheMachine.customIcon = false
+	Samurai.passiveFDArray.append(GhostInTheMachine)
+	
+	
+	//RANK 4: XO-16: Critical Hit
+	ModdedPassiveData XO16CriticalHit
+	XO16CriticalHit.Name = "#FD_UPGRADE_SAMURAI_WEAPON_TIER_2"
+	XO16CriticalHit.description = "#FD_UPGRADE_SAMURAI_WEAPON_TIER_2_DESC"
+	XO16CriticalHit.image = $"r2_ui/menus/loadout_icons/titan_weapon/titan_weapon_xo16"
+	//XO16CriticalHit.image = $"rui/menu/fd_menu/upgrade_vanguard_weapon_tier_2"
+	//XO16CriticalHit.image = $"rui/menu/fd_menu/upgrade_vanguard_weapon_2"
+	XO16CriticalHit.customIcon = false
+	Samurai.passiveFDArray.append(XO16CriticalHit)
+	
+	
+	//RANK 5: Shield Upgrade
+	ModdedPassiveData ShieldUpgrade
+	ShieldUpgrade.Name = "#FD_UPGRADE_SAMURAI_DEFENSE_TIER_2"
+	ShieldUpgrade.description = "#FD_UPGRADE_SAMURAI_DEFENSE_TIER_2_DESC"
+	ShieldUpgrade.image = $"rui/menu/fd_menu/upgrade_monarch_shield"
+	ShieldUpgrade.customIcon = false
+	Samurai.passiveFDArray.append(ShieldUpgrade)
+	
+	
+	//RANK 6: Wraith
+	ModdedPassiveData Wraith
+	Wraith.Name = "#FD_UPGRADE_SAMURAI_UTILITY_TIER_2"
+	Wraith.description = "#FD_UPGRADE_SAMURAI_UTILITY_TIER_2_DESC"
+	Wraith.image = $"rui/titan_loadout/tactical/titan_tactical_phase_dash_menu"
+	//Wraith.image = $"rui/menu/fd_menu/upgrade_ronin_utility_tier_2"
+	//Wraith.image = $"rui/menu/fd_menu/upgrade_ronin_phase_distance"
+	Wraith.customIcon = false
+	Samurai.passiveFDArray.append(Wraith)
+	
+	
+	//RANK 7: Blademaster
+	ModdedPassiveData Blademaster
+	Blademaster.Name = "#FD_UPGRADE_SAMURAI_ULTIMATE"
+	Blademaster.description = "#FD_UPGRADE_SAMURAI_ULTIMATE_DESC"
+	Blademaster.image = $"r2_ui/menus/loadout_icons/titan_weapon/titan_weapon_sword"
+	//Blademaster.image = $"rui/menu/fd_menu/upgrade_ronin_ultimate"
+	//Blademaster.image = $"rui/menu/fd_menu/upgrade_ronin_duration"
+	Blademaster.customIcon = false
+	Samurai.passiveFDArray.append(Blademaster)
+	
+
+	CreateModdedTitanSimple(Samurai)
+	
+	/*
+	//When chassis swap is enabled, each Aegis Upgrades gets applied 3 times because of the 3 chassis (I think) results in a crash
+
+	ModdedTitanData SamuraiOgre = clone Samurai
+	SamuraiOgre.Name = "#DEFAULT_TITAN_SAMURAIOGRE"
+	SamuraiOgre.Tag = "Ogre"
+	SamuraiOgre.BaseName = "scorch"
+	SamuraiOgre.BaseSetFile = "titan_ogre_meteor"
+	CreateModdedTitanSimple(SamuraiOgre)
+
+	ModdedTitanData SamuraiStryder = clone Samurai
+	SamuraiStryder.Name = "#DEFAULT_TITAN_SAMURAISTRYDER"
+	SamuraiStryder.Tag = "Stryder"
+	SamuraiStryder.BaseName = "ronin"
+	SamuraiStryder.BaseSetFile = "titan_stryder_leadwall"
+	CreateModdedTitanSimple(SamuraiStryder)
+	*/
+
+	
+}
