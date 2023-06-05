@@ -86,7 +86,7 @@ As of right now I can only add 3 abilities to each Mount
 - Rearm has no icon (wrong image path proabably)
 
 
-##For Feedback
+## Feedback
 <a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report or know the infamous icon image paths, you can do that here.</a>
 
 
