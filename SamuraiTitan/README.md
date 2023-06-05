@@ -87,11 +87,14 @@ Select your Titan within the additional 3 Titan slots provided by <a href="https
 
 
 ## Feedback
-<a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report or know the infamous icon image paths, you can do that here.</a>
+<a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report or you know the infamous icon image paths, you can tell me here.</a>
 
 
 
 ## Patch Notes
+### 0.1.5
+- Fixed the messed up folder structere
+
 ### 0.1.3
 #### Balancing
 - Moved Energy Syphon to Defense Mount
