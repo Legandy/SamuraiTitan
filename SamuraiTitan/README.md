@@ -20,7 +20,7 @@ Select your Titan within the additional 3 Titan slots provided by <a href="https
 
 
 ### Multipurpose Mounts:
-As of right now I can only add 3 abilities to each Mount
+*As of right now I can only add 3 abilities to each Mount*
 
 #### Offensive Mount:
 - Arc Wave
