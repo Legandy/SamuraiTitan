@@ -82,8 +82,8 @@ Select your Titan within the additional 3 Titan slots provided by <a href="https
 ## Bugs
 - Multi Target Missiles has wrong icon (the image path for right one doesn't work)
 - Aegis Upgrades have wrong icons (don't know the right image paths)
-- Rearm chrashes the game when used with non Monarch abilities (not sure why)
 - Rearm has no icon (wrong image path proabably)
+- Rearm chrashes the game when used with non Monarch abilities (not sure why)
 
 
 ## Feedback
