@@ -55,11 +55,11 @@ There is no other visual confirmation than the name change in the loadout screen
 
 
 ### Aegis Upgrades
-**Aegis Upgrade 1 (BlockDasher/BlockSmoker/EnergySmoker/PhaseDasher/SmokeDasher)**
+**Aegis Upgrade 1 (All variants)**
 - Sword Mastery (Ronin Upgrade 1) <br>
 -> Melee attacks deal more damage.
 
-**Aegis Upgrade 2 (BlockDasher/BlockSmoker/EnergySmoker/PhaseDasher/SmokeDasher)**
+**Aegis Upgrade 2 (All variants)**
 - Chassis Upgrade (Upgrade 2) <br>
 -> Maximum health is increased by 2.500.
 
@@ -75,11 +75,11 @@ There is no other visual confirmation than the name change in the loadout screen
 - Kinetic Tranfser (Ronin Upgrade 4) <br>
 -> Incoming blocked damage charges Sword Core.
 
-**Aegis Upgrade 4 (BlockDasher/BlockSmoker/EnergySmoker/PhaseDasher/SmokeDasher)**
+**Aegis Upgrade 4 (All variants)**
 - XO-16: Critical Hit (Vanguard Upgrade 6) <br>
 -> XO-16 deals additional damage against weak points.
 
-**Aegis Upgrade 5 (BlockDasher/BlockSmoker/EnergySmoker/PhaseDasher/SmokeDasher)**
+**Aegis Upgrade 5 (All variants)**
 - Shield Upgrade (Upgrade 5) <br>
 -> Maximum shield is increased by 2.500.
 
@@ -95,7 +95,7 @@ There is no other visual confirmation than the name change in the loadout screen
 - Energized Smoke Level 2 (Monarch Upgrade 4) <br>
 -> Samurai's Electric Smoke now gives friendly Titans shield.
 
-**Aegis Upgrade 7 (BlockDasher/BlockSmoker/EnergySmoker/PhaseDasher/SmokeDasher)**
+**Aegis Upgrade 7 (All variants)**
 - Blademaster (Ronin Upgrade 7) <br>
 -> Sword Core attacks generate shield. Core's duration is doubled.
 
