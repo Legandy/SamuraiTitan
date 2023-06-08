@@ -7,11 +7,11 @@ Vanguard Titan equipped with a broadsword, sword core and multipurpose ability m
 Not balanced. Mostly desinged for fun and Frontier Defense.
 
 Choose between five Samurai variants (Aegis Upgrades differences):
-- Samurai(BD) = BlockDasher
-- Samurai(BS) = BlockSmoker
-- Samurai(ES) = EnergySmoker
-- Samurai(PD) = PhaseDasher
-- Samurai(SD) = SmokeDasher
+- Samurai-BD = BlockDasher
+- Samurai-BS = BlockSmoker
+- Samurai-ES = EnergySmoker
+- Samurai-PD = PhaseDasher
+- Samurai-SD = SmokeDasher
 
 
 ### Activation
