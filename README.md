@@ -3,7 +3,7 @@
 **Required by Server and Client**
 
 ### Descritpion
-Vanguard Titan equipped with a broadsword, sword core and multipurpose ability mounts.
+Vanguard Titan equipped with a broadsword, sword core and multipurpose ability mounts. <br>
 Not balanced. Mostly desinged for fun and Frontier Defense.
 
 Choose between five Samurai variants (Aegis Upgrades differences):
