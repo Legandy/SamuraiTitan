@@ -116,8 +116,8 @@ There is no other visual confirmation than the name change in the loadout screen
 <a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report or you know the infamous icon image paths, you can tell me here.</a>
 
 Do you really want this to be a somewhat balanced titan?
-If so I would probalby create a seperate balanced version and keep this the fun one.
-But which variant would be the balanced?
+/nIf so I would probalby create a seperate balanced version and keep this the fun one.
+/nBut which variant would be the balanced?
 
 
 
