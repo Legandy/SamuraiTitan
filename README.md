@@ -15,8 +15,8 @@ Choose between five Samurai variants (Aegis Upgrades differences):
 
 
 ### Activation
-Select your Titan within the additional 3 Titan slots provided by <a href="https://northstar.thunderstore.io/package/The_Peepeepoopoo_man/Titanframework/">Peepee.TitanFramework</a>.
-The variant selection is a submenu and will appear after selecting Samurai.
+Select your Titan within the additional 3 Titan slots provided by <a href="https://northstar.thunderstore.io/package/The_Peepeepoopoo_man/Titanframework/">Peepee.TitanFramework</a>. <br>
+The variant selection is a submenu and will appear after selecting Samurai. <br>
 There is no other visual confirmation than the name change in the loadout screen.
 
 
@@ -113,10 +113,10 @@ There is no other visual confirmation than the name change in the loadout screen
 
 
 ## Feedback
-<a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report or you know the infamous icon image paths, you can tell me here.</a>
+<a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report or you know the infamous icon image paths, you can tell me here.</a> <br>
 
-Do you really want this to be a somewhat balanced titan?<br>
-If so I would probalby create a seperate balanced version and keep this the fun one.<br>
+Do you really want this to be a somewhat balanced titan? <br>
+If so I would probalby create a seperate balanced version and keep this the fun one. <br>
 But which variant would be the balanced?
 
 
