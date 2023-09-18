@@ -1,0 +1,180 @@
+global function Samurai_Init
+
+void function Samurai_Init()
+{
+    #if SERVER
+    AddCallback_OnTitanGetsNewTitanLoadout( SetSamuraiTitanLoadout )
+    #endif
+}
+
+#if SERVER
+void function SetSamuraiTitanLoadout( entity titan, TitanLoadoutDef loadout  )
+{
+	if( loadout.titanClass == "#DEFAULT_TITAN_SAMURAI")
+		return
+
+	entity soul = titan.GetTitanSoul()
+	if ( !IsValid( soul ) )
+		return
+
+
+//==================================================//CUSTOM TITAN KIT (PASSIVE 2)//==================================================//
+		//Not working
+		//Multipurpose mounts are the problem
+		//Every time entity null
+		//Probably fixable
+
+		//Examples
+		/*
+		ePassives.PAS_RONIN_PHASE:
+		entity weapon = titan.GetOffhandWeapon( OFFHAND_ANTIRODEO )
+		array<string> mods = weapon.GetMods()
+		mods.append( "pas_ronin_phase" )
+		weapon.SetMods( mods )
+
+		case ePassives.PAS_RONIN_ARCWAVE:
+				entity weapon = titan.GetOffhandWeapon( OFFHAND_RIGHT )
+				array<string> mods = weapon.GetMods()
+				mods.append( "pas_ronin_arcwave" )
+				weapon.SetMods( mods )
+				break
+
+			case ePassives.PAS_VANGUARD_REARM:
+				entity weapon = titan.GetOffhandWeapon( OFFHAND_ANTIRODEO )
+				array<string> mods = weapon.GetMods()
+				mods.append( "pas_vanguard_rearm" )
+				weapon.SetMods( mods )
+				break
+		
+		[ "pas_vanguard_coremeter" ] //Energy Thief?
+		[ "pas_vanguard_shield" ] //Shield Amplieifer
+		[ "pas_vanguard_doom" ] //Survival of the fittest?	OFFHAND_MELEE?	
+		[ "pas_vanguard_rearm" ] //Rapid Rearm				OFFHAND_ANTIRODEO
+		[ "pas_ronin_swordcore" ] //Highlander				OFFHAND_EQUIPMENT
+		[ "pas_ronin_phase" ] //Temporal Anomaly			OFFHAND_ANTIRODEO
+		[ "pas_ronin_arcwave" ] //Thunderstorm				OFFHAND_RIGHT
+		[ "pas_scorch_shield" ]	//Inferno Shield			OFFHAND_LEFT
+		[ "pas_ion_vortex" ] //Vortex Amplifier				OFFHAND_LEFT
+
+	[ "pas_vanguard_coremeter" ]			= ePassives.PAS_VANGUARD_COREMETER,
+	[ "pas_vanguard_shield" ]				= ePassives.PAS_VANGUARD_SHIELD,
+	[ "pas_vanguard_rearm" ]				= ePassives.PAS_VANGUARD_REARM,
+	[ "pas_vanguard_doom" ]					= ePassives.PAS_VANGUARD_DOOM,
+
+	[ "pas_ronin_arcwave" ]					= ePassives.PAS_RONIN_ARCWAVE,
+	[ "pas_ronin_phase" ]					= ePassives.PAS_RONIN_PHASE,
+	[ "pas_ronin_swordcore" ]				= ePassives.PAS_RONIN_SWORDCORE,
+		
+		OFFHAND_RIGHT			= 0				shouldSwapOrdnance
+		OFFHAND_LEFT			= 1				shouldSwapDefense
+		OFFHAND_ANTIRODEO		= 2				shoulSwapTactical
+		OFFHAND_EQUIPMENT		= 3				shouldSwapCore
+		OFFHAND_MELEE			= 5				shouldSwapMelee
+		OFFHAND_INVENTORY		= 4				SMOKE
+		OFFHAND_COUNT			= 6 ?			Passive1?
+
+		OFFHAND_ORDNANCE		= OFFHAND_RIGHT	shouldSwapOrdnance
+		OFFHAND_SPECIAL			= OFFHAND_LEFT	shouldSwapDefense
+		OFFHAND_TITAN_CENTER	= 2				OFFHAND_ANTIRODEO
+
+		if ( shouldSwapOrdnance )
+		titan.TakeOffhandWeapon( OFFHAND_ORDNANCE )
+		if ( shouldSwapDefense )
+		titan.TakeOffhandWeapon( OFFHAND_SPECIAL )
+		if ( shoulSwapTactical )
+		titan.TakeOffhandWeapon( OFFHAND_ANTIRODEO )
+		if ( shouldSwapMelee )
+		titan.TakeOffhandWeapon( OFFHAND_MELEE )
+		if ( shouldSwapCore )
+		titan.TakeOffhandWeapon( OFFHAND_EQUIPMENT )
+		*/
+
+
+
+
+		
+		/*
+		if(SoulHasPassive( soul, ePassives["#GEAR_RONIN_HIGHLANDER"] ) )
+		{
+			//titan.GetOffhandWeapon(OFFHAND_EQUIPMENT).SetMods(["pas_ronin_swordcore"])
+			//titan.GetOffhandWeapon(OFFHAND_MELEE).SetMods(["pas_ronin_swordcore"])
+			//titan.GetOffhandWeapon(OFFHAND_COUNT).SetMods(["pas_ronin_swordcore"])
+			titan.GetMainWeapons()[0].SetMods(["pas_ronin_swordcore"])
+		}
+		
+		
+		/*
+		if(SoulHasPassive( soul, ePassives["#GEAR_VANGUARD_ENERGYTHIEF"] ) )
+		{
+			//titan.GetOffhandWeapon(OFFHAND_EQUIPMENT).SetMods(["pas_vanguard_coremeter"])
+			//titan.GetOffhandWeapon(OFFHAND_MELEE).SetMods(["pas_vanguard_coremeter"])
+			titan.GetMainWeapons()[0].SetMods(["pas_vanguard_coremeter"])
+		}
+		*/
+		/*
+		//NOT WORKING
+		if(SoulHasPassive( soul, ePassives["#GEAR_VANGUARD_SHIELDAMPLIFIER"] ) )
+		{
+			//titan.GetOffhandWeapon(OFFHAND_LEFT).SetMods(["pas_vanguard_shield"])
+		}
+		*/
+
+		
+		/*
+		if(SoulHasPassive( soul, ePassives["#GEAR_VANGUARD_REARM"] ) )
+		{
+			titan.GetOffhandWeapon(OFFHAND_LEFT).SetMods(["pas_vanguard_rearm"])
+		}
+		*/
+
+		/*
+		//WORKS WITHOUT MULITPURPOSE MOUNTS
+		if(SoulHasPassive( soul, ePassives["#GEAR_RONIN_TEMPORALANOMALY"] ) )
+		{
+			titan.GetOffhandWeapon(OFFHAND_TITAN_CENTER).SetMods(["pas_ronin_phase"])
+		}
+		/*
+		//WORKS WITHOUT MULITPURPOSE MOUNTS
+		if(SoulHasPassive( soul, ePassives["#GEAR_RONIN_THUNDERSTORM"] ) )
+		{
+			titan.GetOffhandWeapon(OFFHAND_RIGHT).SetMods(["pas_ronin_arcwave"])
+		}
+		*/
+
+//==================================================//AEGIS RANKS//==================================================//
+
+	if(GetCurrentPlaylistVarInt("aegis_upgrades", 0) == 1)
+	{	
+	entity weapon = titan.GetMainWeapons()[0]
+
+	//RANK 1: Sword Mastery
+	weapon.AddMod( "fd_sword_upgrade" )
+	titan.GetOffhandWeapon( OFFHAND_MELEE ).AddMod( "fd_sword_upgrade" )
+
+	//RANK 2: Chassis Upgrade
+	loadout.setFileMods.append( "fd_health_upgrade" )
+
+	//RANK 3: ENERGIZED SMOKE 1
+	weapon.AddMod( "fd_vanguard_utility_1" )
+	titan.GetOffhandWeapon( OFFHAND_SPECIAL ).AddMod( "fd_vanguard_utility_1" )
+
+	//RANK 4: XO-16: Critical Hit
+	weapon.AddMod( "fd_vanguard_weapon_2" )
+	titan.GetOffhandWeapon(OFFHAND_RIGHT).AddMod( "fd_vanguard_weapon_2" )		
+
+	//RANK 5: Shield Upgrade
+	float titanShieldHealth = GetTitanSoulShieldHealth( soul )
+	soul.SetShieldHealthMax( int( titanShieldHealth * 1.5 ) )
+
+	//RANK 6: ENERGIZED SMOKE 2
+	weapon.AddMod( "fd_vanguard_utility_2" )
+	titan.GetOffhandWeapon( OFFHAND_SPECIAL ).AddMod( "fd_vanguard_utility_2" )
+
+
+	//RANK 7: Blademaster
+	weapon.AddMod( "fd_duration" )
+	titan.GetOffhandWeapon( OFFHAND_EQUIPMENT ).AddMod( "fd_duration" )
+	}
+	
+}
+#endif
