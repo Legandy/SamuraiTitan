@@ -12,7 +12,7 @@ void function Samurai_CheckDependencies()
     #if SAMURAI_HAS_TITANFRAMEWORK
 
     #elseif UI
-        Samurai_CreateDependencyDialog( "Samurai.Titan", "Peepee.TitanFramework", "https://northstar.thunderstore.io/package/The_Peepeepoopoo_man/Titanframework/" )
+        Samurai_CreateDependencyDialog( "Legandy.Samurai", "Peepee.TitanFramework", "https://northstar.thunderstore.io/package/The_Peepeepoopoo_man/Titanframework/" )
     #endif
 }
 
