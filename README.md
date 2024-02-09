@@ -7,34 +7,34 @@ Vanguard Chassis equipped with a broadsword, sword core and multipurpose ability
 
 
 ### Activation
-Select your Titan within the additional 3 Titan slots provided by `Peepee.TitanFramework`.
+Select your Titan within the additional 3 Titan slots provided by <a href="https://northstar.thunderstore.io/package/The_Peepeepoopoo_man/Titanframework/">Peepee.TitanFramework</a>.
 
 
-## [Loadout]
-*Weapon:* 
+## Loadout
+### Weapon:
 - XO-16 Chaingun
 
 
-*Core:* 
+### Core:
 - Sword Core
 
 
-*Multipurpose Mounts:*
+### Multipurpose Mounts:
+*As of right now I can only add 3 abilities to each Mount.*
 
-*Offensive Mount:*
+#### Offensive Mount:
 - Arc Wave
-- Laser Shot
 - Multi Target Missiles
+- Laser Shot
 
-*Defensive Mount:*
+#### Defensive Mount:
 - Sword Block
-- Vortex Shield
-- Thermal Shield
-
-*Utility Mount:*
-- PhaseDash
 - Energy Siphon
-- Tether Trap
+- Vortex Shield
+
+#### Utility Mount:
+- PhaseDash
+- Rearm
 
 
 ### Titan Kit
@@ -76,17 +76,28 @@ Select your Titan within the additional 3 Titan slots provided by `Peepee.TitanF
 
 
 ## Credits
-- The_Peepeepoopoo_man
+<a href="https://northstar.thunderstore.io/package/The_Peepeepoopoo_man/">The_Peepeepoopoo_man</a>
 
 
 ## Bugs
 - Multi Target Missiles has wrong icon (the image path for right one doesn't work)
 - Aegis Upgrades have wrong icons (don't know the right image paths)
-- Could not implement Rearm because the game chrashes when used with non Monarch abilities (not sure why)
+- Rearm has no icon (wrong image path proabably)
+- Rearm chrashes the game when used with non Monarch abilities (not sure why)
+
+
+## Feedback
+<a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report or know the infamous icon image paths, you can do that here.</a>
+
 
 
 ## Patch Notes
+### 0.1.3
+#### Balancing
+- Moved Energy Syphon to Defense Mount
+- Removed Thermal Shield (No synergies with the sword)
+- Removed Tether Trap
+- Added Rearm (still buggy)
 
 ### 0.1.0
-
 #### Release
