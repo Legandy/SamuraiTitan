@@ -3,7 +3,7 @@
 **Required by Server and Client**
 
 ### Descritpion
-Vanguard Titan equipped with a broadsword, sword core and multipurpose ability mounts.
+Vanguard Titan equipped with a broadsword, sword core and multipurpose ability mounts. <br>
 Not balanced. Mostly desinged for fun and Frontier Defense.
 
 Choose between five Samurai variants (Aegis Upgrades differences):
@@ -15,8 +15,8 @@ Choose between five Samurai variants (Aegis Upgrades differences):
 
 
 ### Activation
-Select your Titan within the additional 3 Titan slots provided by <a href="https://northstar.thunderstore.io/package/The_Peepeepoopoo_man/Titanframework/">Peepee.TitanFramework</a>.
-The variant selection is a submenu and will appear after selecting Samurai.
+Select your Titan within the additional 3 Titan slots provided by <a href="https://northstar.thunderstore.io/package/The_Peepeepoopoo_man/Titanframework/">Peepee.TitanFramework</a>. <br>
+The variant selection is a submenu and will appear after selecting Samurai. <br>
 There is no other visual confirmation than the name change in the loadout screen.
 
 
@@ -55,48 +55,48 @@ There is no other visual confirmation than the name change in the loadout screen
 
 
 ### Aegis Upgrades
-**Aegis Upgrade 1 (BlockDasher/BlockSmoker/EnergySmoker/PhaseDasher/SmokeDasher)**
-- Sword Mastery (Ronin Upgrade 1)
+**Aegis Upgrade 1 (All variants)**
+- Sword Mastery (Ronin Upgrade 1) <br>
 -> Melee attacks deal more damage.
 
-**Aegis Upgrade 2 (BlockDasher/BlockSmoker/EnergySmoker/PhaseDasher/SmokeDasher)**
-- Chassis Upgrade (Upgrade 2)
+**Aegis Upgrade 2 (All variants)**
+- Chassis Upgrade (Upgrade 2) <br>
 -> Maximum health is increased by 2.500.
 
 **Aegis Upgrade 3 (PhaseDasher)**
-- Ghost in the Machine (Ronin Upgrade 3)
+- Ghost in the Machine (Ronin Upgrade 3) <br>
 -> Phase Dash has two charges.
 
 **Aegis Upgrade 3 (EnergySmoker/SmokeDasher)**
-- Energized Smoke Level 1 (Monarch Upgrade 1)
+- Energized Smoke Level 1 (Monarch Upgrade 1) <br>
 -> Samurai's Electric Smoke now gives him shield.
 
 **Aegis Upgrade 3 (BlockDasher/BlockSmoker)**
-- Kinetic Tranfser (Ronin Upgrade 4)
+- Kinetic Tranfser (Ronin Upgrade 4) <br>
 -> Incoming blocked damage charges Sword Core.
 
-**Aegis Upgrade 4 (BlockDasher/BlockSmoker/EnergySmoker/PhaseDasher/SmokeDasher)**
-- XO-16: Critical Hit (Vanguard Upgrade 6)
+**Aegis Upgrade 4 (All variants)**
+- XO-16: Critical Hit (Vanguard Upgrade 6) <br>
 -> XO-16 deals additional damage against weak points.
 
-**Aegis Upgrade 5 (BlockDasher/BlockSmoker/EnergySmoker/PhaseDasher/SmokeDasher)**
-- Shield Upgrade (Upgrade 5)
+**Aegis Upgrade 5 (All variants)**
+- Shield Upgrade (Upgrade 5) <br>
 -> Maximum shield is increased by 2.500.
 
 **Aegis Upgrade 6 (BlockDasher/PhaseDasher/SmokeDasher)**
-- Wraith (Ronin Upgrade 6)
+- Wraith (Ronin Upgrade 6) <br>
 -> Phase Dash travels further.
 
 **Aegis Upgrade 6 (BlockSmoker)**
-- Energized Smoke Level 1 (Monarch Upgrade 1)
+- Energized Smoke Level 1 (Monarch Upgrade 1) <br>
 -> Samurai's Electric Smoke now gives him shield.
 
 **Aegis Upgrade 6 (EnergySmoker)**
-- Energized Smoke Level 2 (Monarch Upgrade 4)
+- Energized Smoke Level 2 (Monarch Upgrade 4) <br>
 -> Samurai's Electric Smoke now gives friendly Titans shield.
 
-**Aegis Upgrade 7 (BlockDasher/BlockSmoker/EnergySmoker/PhaseDasher/SmokeDasher)**
-- Blademaster (Ronin Upgrade 7)
+**Aegis Upgrade 7 (All variants)**
+- Blademaster (Ronin Upgrade 7) <br>
 -> Sword Core attacks generate shield. Core's duration is doubled.
 
 
@@ -113,15 +113,16 @@ There is no other visual confirmation than the name change in the loadout screen
 
 
 ## Feedback
-<a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report or you know the infamous icon image paths, you can tell me here.</a>
+<a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report or you know the infamous icon image paths, you can tell me here.</a> <br>
 
-Do you really want this to be a somewhat balanced titan?
-If so I would probalby create a seperate balanced version and keep this the fun one.
-But which variant would be the balanced?
-
+Do you really want this to be a somewhat balanced titan? <br>
+But which variant would be the balanced? <br>
 
 
 ## Patch Notes
+### 0.1.7
+- ReadMe update
+
 ### 0.1.6
 - Added four variants with slightly different Aegis Upgrades
 	- some of you wanted both Phase Dash upgrades replaced with both Energized Smoke upgrades
