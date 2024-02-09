@@ -1,39 +1,52 @@
 {
 	"Name": "SamuraiTitan",
-	"Description": "Vanguard Titan equipped with a broadsword, sword core and multipurpose ability mounts.",
+	"Description": "Vanguard Titan equipped with a broadsword and sword core.",
 	"LoadPriority": 5,
 	"RequiredOnClient": true,
-	"Version": "0.1.7",
+	"Version": "0.1.8",
 	"Scripts": 
 	[
 		{
+			"Path": "Samurai_Dependencies.gnut",
+			"RunOn": "UI",
+			"UICallback":
+            {
+                "After": "Samurai_CheckDependencies"
+            }
+		},
+		{
 			"Path": "Samurai_CreateTitan.gnut",
 			"RunOn": "UI || SERVER || CLIENT",
-			"ServerCallback": 
-			{
+			"ServerCallback": {
 				"After": "SamuraiSetup"
             },
 			
-			"ClientCallback": 
-			{
+			"ClientCallback": {
 				"After": "SamuraiSetup"
 			},
-			"UICallback": 
-			{
+			"UICallback": {
 				"After": "SamuraiSetup"
 			}
 		},
 		{
-			"Path": "Samurai_OnSpawn.gnut",
-			"RunOn": "SERVER",
-            "ServerCallback": 
-			{
-				"After": "SamuraiCallbacks"
-            }
+			"Path": "Samurai_Loadout.gnut",
+			"RunOn": "( CLIENT || SERVER ) && MP",
+			"ClientCallback": {
+				"After": "Samurai_Init"
+			},
+			"ServerCallback": {
+				"After": "Samurai_Init"
+			}
 		}
 	],
+
 	"Localisation": 
 	[
 		"resource/Samurai_localisation_%language%.txt"
-	]
+	],
+
+	"Dependencies":
+    {
+      "SAMURAI_HAS_TITANFRAMEWORK": "Peepee.TitanFramework"
+    }
 }
