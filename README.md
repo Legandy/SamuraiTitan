@@ -17,7 +17,7 @@ Mostly desinged for fun.
 
 
 #### Offensive Mount:
-- Salvo Rockets (Tone)
+- Salvo Rockets (Monarch)
 
 #### Defensive Mount:
 - Sword Block (Ronin)
@@ -27,10 +27,12 @@ Mostly desinged for fun.
 
 
 ### Titan Kit
--> Unimplemented
+- Temporal Anomaly (Ronin)
+- Highlander (Ronin)
+- Energy Thief (Monarch)
 
 
-### Aegis Upgrades
+### Aegis Upgrades (not working)
 **Aegis Upgrade 1**
 - Sword Mastery (Ronin Upgrade 1) <br>
 -> Melee attacks deal more damage.
@@ -66,7 +68,7 @@ Mostly desinged for fun.
 
 
 ## Bugs
-- Aegis Upgrades have wrong or no icons (don't know the right image paths)
+- Titan Edit in Aegis Game Modes will crash the game because of no Aegis Upgrades
 
 
 ## Feedback
@@ -74,6 +76,10 @@ Mostly desinged for fun.
 
 
 ## Patch Notes
+### 1.0.0
+- Titan Kit added
+- Aegis Upgrades deactivated (they didn't work)
+
 ### 0.1.9
 - ReadMe update
 
@@ -83,6 +89,7 @@ Mostly desinged for fun.
 	- No Aegis Upgrade selection anymore
 	- Both Dash Aegis Upgrades replaced with both Energy Smoke Upgrades
 	- Titan Kit unimplemented (not on purpose)
+	- Aegis Upgrades don't work
 
 ### 0.1.7
 - ReadMe update
@@ -94,7 +101,7 @@ Mostly desinged for fun.
 	- But I didn't want to cut it (yet) so I created five variants to choose from (PhaseDasher is the original)
 
 ### 0.1.5
-- Fixed the messed up folder structere
+- Fixed the messed up folder structure
 
 ### 0.1.4
 - ReadMe update
