@@ -1,9 +1,9 @@
 {
 	"Name": "SamuraiTitan",
-	"Description": "Custom Titan equipped with a broadsword, sword core and multipurpose ability mounts.",
+	"Description": "Vanguard Titan equipped with a broadsword, sword core and multipurpose ability mounts.",
 	"LoadPriority": 5,
 	"RequiredOnClient": true,
-	"Version": "0.1.1",
+	"Version": "0.1.2",
 	"Scripts": 
 	[
 		{
