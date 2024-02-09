@@ -74,12 +74,15 @@ Mostly desinged for fun.
 
 
 ## Patch Notes
+### 0.1.9
+- ReadMe update
+
 ### 0.1.8
 - Simplified and somewhat balanced the titan
-	-> No multipurpose mounts anymore
-	-> No Aegis Upgrade selection anymore
-	-> Both Dash Aegis Upgrades replaced with both Energy Smoke Upgrades
-	-> Titan Kit unimplemented (not on purpose)
+	- No multipurpose mounts anymore
+	- No Aegis Upgrade selection anymore
+	- Both Dash Aegis Upgrades replaced with both Energy Smoke Upgrades
+	- Titan Kit unimplemented (not on purpose)
 
 ### 0.1.7
 - ReadMe update
