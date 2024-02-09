@@ -1,0 +1,266 @@
+global function SamuraiCallbacks
+void function SamuraiCallbacks()
+{
+    #if SERVER
+    AddCallback_OnTitanGetsNewTitanLoadout( ApplySamuraiPassives )
+    #endif
+}
+void function ApplySamuraiPassives( entity titan, TitanLoadoutDef loadout )
+{
+    
+	if(loadout.titanClass == "#DEFAULT_TITAN_SAMURAISTRYDER" || loadout.titanClass == "#DEFAULT_TITAN_SAMURAIOGRE" || loadout.titanClass == "#DEFAULT_TITAN_SAMURAI")
+	{
+		entity player = GetPetTitanOwner( titan )
+		entity soul = titan.GetTitanSoul()
+		
+		if (!(IsValid( soul )))
+			return
+
+		
+        //==================================================//SELECTABLE WEAPON (PASSIVE 2)//==================================================//
+		//Can not be active with Custom Titan Kit (same slot)
+		/*
+		if(SoulHasPassive( soul, ePassives["Predator Cannon"] ) )
+		{
+			titan.GiveWeapon("mp_titanweapon_predator_cannon" )
+        }
+		if(SoulHasPassive( soul, ePassives["XO16"] ) )
+		{
+			titan.GiveWeapon("mp_titanweapon_xo16_vanguard" )
+        }
+        if(SoulHasPassive( soul, ePassives["Leadwall"] ) )
+		{
+			titan.GiveWeapon("mp_titanweapon_leadwall" )
+        }
+        if(SoulHasPassive( soul, ePassives["Rocket launcher"] ) )
+		{
+			titan.GiveWeapon("mp_titanweapon_rocketeer_rocketstream" )
+        }
+		*/
+
+
+		//==================================================//CUSTOM TITAN KIT (PASSIVE 2)//==================================================//
+		//Not working
+		//Multipurpose mounts are the problem
+		//Every time entity null
+
+		//Examples
+		/*
+		ePassives.PAS_RONIN_PHASE:
+		entity weapon = titan.GetOffhandWeapon( OFFHAND_ANTIRODEO )
+		array<string> mods = weapon.GetMods()
+		mods.append( "pas_ronin_phase" )
+		weapon.SetMods( mods )
+		
+		[ "pas_vanguard_doom" ] //Survival of the fittest?	OFFHAND_MELEE?	
+		[ "pas_vanguard_rearm" ] //Rapid Rearm				OFFHAND_ANTIRODEO
+		[ "pas_ronin_swordcore" ] //Highlander				OFFHAND_EQUIPMENT
+		[ "pas_ronin_phase" ] //Temporal Anomaly			OFFHAND_ANTIRODEO
+		[ "pas_ronin_arcwave" ] //Thunderstorm				OFFHAND_RIGHT
+		[ "pas_scorch_shield" ]	//Inferno Shield			OFFHAND_LEFT
+		[ "pas_ion_vortex" ] //Vortex Amplifier				OFFHAND_LEFT
+		[ "pas_vanguard_coremeter" ] //Energy Thief
+		[ "pas_vanguard_shield" ] //Shield Amplieifer
+		
+		OFFHAND_RIGHT			= 0
+		OFFHAND_LEFT			= 1
+		OFFHAND_ANTIRODEO		= 2				shoulSwapTactical
+		OFFHAND_EQUIPMENT		= 3				shouldSwapCore
+		OFFHAND_MELEE			= 5				shouldSwapMelee
+		OFFHAND_ORDNANCE		= OFFHAND_RIGHT	shouldSwapOrdnance
+		OFFHAND_SPECIAL			= OFFHAND_LEFT	shouldSwapDefense
+		OFFHAND_INVENTORY		= 4
+		OFFHAND_TITAN_CENTER	= 2
+		OFFHAND_COUNT			= 6
+
+		if ( shouldSwapOrdnance )
+		titan.TakeOffhandWeapon( OFFHAND_ORDNANCE )
+		if ( shouldSwapDefense )
+		titan.TakeOffhandWeapon( OFFHAND_SPECIAL )
+		if ( shoulSwapTactical )
+		titan.TakeOffhandWeapon( OFFHAND_ANTIRODEO )
+		if ( shouldSwapMelee )
+		titan.TakeOffhandWeapon( OFFHAND_MELEE )
+		if ( shouldSwapCore )
+		titan.TakeOffhandWeapon( OFFHAND_EQUIPMENT )
+		*/
+		/*
+		//NOT TESTED
+		if(SoulHasPassive( soul, ePassives["#GEAR_VANGUARD_ENERGYTHIEF"] ) )
+		{
+			//titan.GetOffhandWeapon(OFFHAND_MELEE).AddMod(["pas_vanguard_coremeter"])
+			//titan.GetOffhandWeapon(OFFHAND_MELEE).SetMods(["pas_vanguard_coremeter"])
+		}
+		//NOT WORKING
+		if(SoulHasPassive( soul, ePassives["#GEAR_RONIN_HIGHLANDER"] ) )
+		{
+			//titan.GetOffhandWeapon(OFFHAND_EQUIPMENT).AddMod(["pas_ronin_swordcore"])
+			//titan.GetOffhandWeapon(OFFHAND_EQUIPMENT).SetMods(["pas_ronin_swordcore"])
+		}
+		
+		//WORKS without mutlipurpose mounts
+		if(SoulHasPassive( soul, ePassives["#GEAR_RONIN_TEMPORALANOMALY"] ) )
+		{
+			titan.GetOffhandWeapon(OFFHAND_TITAN_CENTER).SetMods(["pas_ronin_phase"])
+		}
+		
+		//WORKS without mutlipurpose mounts
+		if(SoulHasPassive( soul, ePassives["#GEAR_RONIN_THUNDERSTORM"] ) )
+		{
+			titan.GetOffhandWeapon(OFFHAND_RIGHT).SetMods(["pas_ronin_arcwave"])
+		}
+		*/
+				
+		
+        //==================================================//OFFENSE (PASSIVE 6, RIGHT)//==================================================//
+        
+		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_ARC_WAVE"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanweapon_arc_wave", OFFHAND_RIGHT )
+		}
+		/*
+        if(SoulHasPassive( soul, ePassives["#WPN_TITAN_SALVO_ROCKETS"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanweapon_salvo_rockets", OFFHAND_RIGHT )
+		}
+		*/
+		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_SHOULDER_ROCKETS"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanweapon_shoulder_rockets", OFFHAND_RIGHT )
+		}
+        if(SoulHasPassive( soul, ePassives["#WPN_TITAN_LASER_LITE"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanweapon_laser_lite", OFFHAND_RIGHT )
+		}
+
+
+		//==================================================//DEFENSE (PASSIVE 4, LEFT)//==================================================//
+        
+		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_BASIC_BLOCK"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanability_basic_block", OFFHAND_LEFT )
+		}
+		
+		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_HEAT_SHIELD"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanweapon_heat_shield", OFFHAND_LEFT )
+		}
+		
+        if(SoulHasPassive( soul, ePassives["#WPN_TITAN_VORTEX_SHIELD"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanweapon_vortex_shield_ion", OFFHAND_LEFT )
+		}
+		/*
+		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_STUN_LASER"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanweapon_stun_laser", OFFHAND_LEFT )
+		}
+		*/
+
+		//==================================================//UTILITY (PASSIVE 5, MIDDLE)//==================================================//	
+        
+		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_PHASE_DASH"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanability_phase_dash", OFFHAND_ANTIRODEO )
+		}
+		
+        if(SoulHasPassive( soul, ePassives["#WPN_TITAN_STUN_LASER"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanweapon_stun_laser", OFFHAND_ANTIRODEO )
+		}
+		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_TETHER_TRAP"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanability_tether_trap", OFFHAND_ANTIRODEO )
+		}
+		/*
+		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_SLOW_TRAP"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanability_slow_trap", OFFHAND_ANTIRODEO )
+		}
+		*/
+		/*
+		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_HOVER"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanability_hover", OFFHAND_ANTIRODEO )
+		}
+		*/
+		/*
+		if(SoulHasPassive( soul, ePassives["#WPN_TITANABILITY_REARM"] ) )
+		{
+			titan.GiveOffhandWeapon("mp_titanability_rearm", OFFHAND_ANTIRODEO )
+		}
+		*/
+
+		//==================================================//AEGIS UPGRADES//==================================================//
+		//When chassis swap is enabled, each Aegis Upgrades gets applied 3 times because of the 3 chassis (I think) results in a crash
+
+		if(GetCurrentPlaylistVarInt("aegis_upgrades", 0) == 1)
+		{	
+			entity weapon = titan.GetMainWeapons()[0]
+
+			//RANK 1: Sword Mastery
+			weapon.AddMod( "fd_sword_upgrade" )
+			titan.GetOffhandWeapon( OFFHAND_MELEE ).AddMod( "fd_sword_upgrade" )
+			// "fd_upgrade_ronin_weapon_tier_1":
+			// entity weapon = titan.GetOffhandWeapon( OFFHAND_MELEE )
+			// array<string> mods = weapon.GetMods()
+			// mods.append( "fd_sword_upgrade" )
+			// weapon.SetMods( mods )
+			
+			
+			//RANK 2: Chassis Upgrade
+			loadout.setFileMods.append( "fd_health_upgrade" )
+			//"fd_upgrade_vanguard_defense_tier_1":
+
+			
+			//RANK 3: Ghost In TheMachine
+			weapon.AddMod( "fd_phase_charges" )
+			titan.GetOffhandWeapon( OFFHAND_ANTIRODEO ).AddMod( "fd_phase_charges" )
+			// "fd_upgrade_ronin_utility_tier_1":
+			// entity weapon = titan.GetOffhandWeapon( OFFHAND_ANTIRODEO )
+			// array<string> mods = weapon.GetMods()
+			// mods.append( "fd_phase_charges" )
+			// weapon.SetMods( mods )
+
+			
+			//RANK 4: XO-16: Critical Hit
+			weapon.AddMod( "fd_vanguard_weapon_2" )
+			titan.GetOffhandWeapon(OFFHAND_RIGHT).AddMod( "fd_vanguard_weapon_2" )
+			// "fd_upgrade_vanguard_weapon_tier_2":
+			// entity weapon = titan.GetMainWeapons()[0]
+			// array<string> mods = weapon.GetMods()
+			// mods.append( "fd_vanguard_weapon_2" )
+			// weapon.SetMods( mods )
+			
+
+			//RANK 5: Shield Upgrade
+			float titanShieldHealth = GetTitanSoulShieldHealth( soul )
+			soul.SetShieldHealthMax( int( titanShieldHealth * 1.5 ) )
+			//"fd_upgrade_ronin_defense_tier_2":
+			//soul.SetShieldHealthMax( int( GetTitanSoulShieldHealth( soul ) * 1.5 ) )
+				
+			
+			//RANK 6: Wraith
+			weapon.AddMod( "fd_phase_distance" )
+			titan.GetOffhandWeapon( OFFHAND_ANTIRODEO ).AddMod( "fd_phase_distance" )
+			// "fd_upgrade_ronin_utility_tier_2":
+			// entity weapon = titan.GetOffhandWeapon( OFFHAND_ANTIRODEO )
+			// array<string> mods = weapon.GetMods()
+			// mods.append( "fd_phase_distance" )
+			// weapon.SetMods( mods )
+			
+
+			//RANK 7: Blademaster
+			weapon.AddMod( "fd_duration" )
+			titan.GetOffhandWeapon( OFFHAND_EQUIPMENT ).AddMod( "fd_duration" )
+			// "fd_upgrade_ronin_ultimate":
+			// entity weapon = titan.GetOffhandWeapon( OFFHAND_EQUIPMENT )
+			// array<string> mods = weapon.GetMods()
+			// mods.append( "fd_duration" )
+			// weapon.SetMods( mods )
+			
+			
+		}
+		
+	}
+}
