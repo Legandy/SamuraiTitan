@@ -31,47 +31,9 @@ void function SamuraiSetup()
 		"#TITAN_HINT_SAMURAI_006"
 		"#TITAN_HINT_SAMURAI_007"
 		"#TITAN_HINT_SAMURAI_008"
+		"#TITAN_HINT_SAMURAI_009"
+		"#TITAN_HINT_SAMURAI_010"
     ]
-
-	//==================================================//SELECTABLE WEAPON (PASSIVE 2)//==================================================//
-	//WORKS
-	/*
-	ModdedTitanWeaponAbilityData GenericWeaponMount
-	//when this is false titanframework will not create items, useful if you want to use default items
-	GenericWeaponMount.custom = true
-	//When this is true weapons are not given in the onspawn callback
-	//useful if you set titan weapons in a custom callback, also allows you to set nonexistent weapons in weaponName
-	GenericWeaponMount.scriptHandled = true 
-	GenericWeaponMount.displayName = "Generic weapon mount"
-	GenericWeaponMount.weaponName = "GenericWeaponMount"
-	//Custom weapons can actually use default weapons as the item
-    //the rest of these just effect descriptions and such, this is ideal if you want to create a generic slot, which Samurai does
-    //However when doing so with the weapon remember that this weapon is what will be displayed in the menu
-
-	GenericWeaponMount.MenuModelWeaponFunc = string function(TitanLoadoutDef loadout)
-	{
-		switch(loadout.passive2)
-		{
-			case "Predator Cannon":
-				return "mp_titanweapon_predator_cannon"
-				break
-			case "Leadwall":
-				return "mp_titanweapon_leadwall"
-				break
-			case "Rocket launcher":
-				return "mp_titanweapon_rocketeer_rocketstream"
-				break
-			case "XO16":
-				return "mp_titanweapon_xo16_vanguard"
-				break
-		}
-		return "mp_titanweapon_xo16_vanguard"
-	}
-	
-	GenericWeaponMount.description = "You have hands, hands hold things, things include: guns"
-	Samurai.Primary = GenericWeaponMount
-	*/
-	
 
 	//==================================================//DEFINING WEAPON//==================================================//
     ModdedTitanWeaponAbilityData Primary
@@ -166,7 +128,7 @@ void function SamuraiSetup()
 
 	//==================================================//MULTIPURPOSE MOUNTS (PASSIVE 4,5,6)//==================================================//
     //Passive 4 (left), Passive 5 (right) and Passive 6 (middle) are the abilities
-	//Index Error when there are more than 3 abilities
+	//More than 3 abilities each results in index error
 
     //==================================================//OFFENSE (PASSIVE 6, RIGHT)//==================================================//
 	
@@ -176,18 +138,20 @@ void function SamuraiSetup()
 	ArcWave.image = $"rui/titan_loadout/ordnance/arc_wave_menu"
 	Samurai.passive6Array.append(ArcWave)
 
-	ModdedPassiveData Laser
-	Laser.Name = "#WPN_TITAN_LASER_LITE"
-	Laser.description = "WPN_TITAN_LASER_LITE_DESC"
-	Laser.image = $"rui/titan_loadout/ordnance/laser_shot_menu"
-	Samurai.passive6Array.append(Laser)
-
 	ModdedPassiveData ShoulderRockets
 	ShoulderRockets.Name = "#WPN_TITAN_SHOULDER_ROCKETS"
 	ShoulderRockets.description = "#WPN_TITAN_SHOULDER_ROCKETS_DESC"
 	//ShoulderRockets.image = $"rui/titan_loadout/ordnance/multilock_rockets_menu"
 	ShoulderRockets.image = $"rui/titan_loadout/ordnance/tracking_rockets_menu"
 	Samurai.passive6Array.append(ShoulderRockets)
+
+	ModdedPassiveData Laser
+	Laser.Name = "#WPN_TITAN_LASER_LITE"
+	Laser.description = "WPN_TITAN_LASER_LITE_DESC"
+	Laser.image = $"rui/titan_loadout/ordnance/laser_shot_menu"
+	Samurai.passive6Array.append(Laser)
+
+	
 
 	/*
 	ModdedPassiveData ClusterMissile
@@ -207,24 +171,23 @@ void function SamuraiSetup()
 	SwordBlock.image = $"rui/titan_loadout/defensive/titan_defensive_sword_block_menu"
 	Samurai.passive4Array.append(SwordBlock)
 
+	ModdedPassiveData Siphon
+	Siphon.Name = "#WPN_TITAN_STUN_LASER"
+	Siphon.description = "WPN_TITAN_STUN_LASER_DESC"
+	Siphon.image = $"rui/titan_loadout/defensive/titan_defensive_energy_siphon_menu"
+	Samurai.passive4Array.append(Siphon)
+
 	ModdedPassiveData VortexShield
 	VortexShield.Name = "#WPN_TITAN_VORTEX_SHIELD"
 	VortexShield.description = "WPN_TITAN_VORTEX_SHIELD_DESC"
 	VortexShield.image = $"rui/titan_loadout/defensive/titan_defensive_vortex_menu"
 	Samurai.passive4Array.append(VortexShield)
-	
+	/*
 	ModdedPassiveData HeatShield
 	HeatShield.Name = "#WPN_TITAN_HEAT_SHIELD"
 	HeatShield.description = "#WPN_TITAN_HEAT_SHIELD_DESC"
 	HeatShield.image = $"rui/titan_loadout/defensive/titan_defensive_heat_shield_menu"
 	Samurai.passive4Array.append(HeatShield)
-	
-	/*
-	ModdedPassiveData Siphon
-	Siphon.Name = "#WPN_TITAN_STUN_LASER"
-	Siphon.description = "WPN_TITAN_STUN_LASER_DESC"
-	Siphon.image = $"rui/titan_loadout/defensive/titan_defensive_energy_siphon_menu"
-	Samurai.passive5Array.append(Siphon)
 	*/
 
 	//==================================================//UTILITY (PASSIVE 5, MIDDLE)//==================================================//
@@ -234,24 +197,19 @@ void function SamuraiSetup()
 	PhaseDash.description = "WPN_TITAN_PHASE_DASH_DESC"
 	PhaseDash.image = $"rui/titan_loadout/tactical/titan_tactical_phase_dash_menu"
 	Samurai.passive5Array.append(PhaseDash)
-	
-	ModdedPassiveData Siphon
-	Siphon.Name = "#WPN_TITAN_STUN_LASER"
-	Siphon.description = "WPN_TITAN_STUN_LASER_DESC"
-	Siphon.image = $"rui/titan_loadout/defensive/titan_defensive_energy_siphon_menu"
-	Samurai.passive5Array.append(Siphon)
-	
+
+	//Game chrashes when used with non Monarch abilities
+	ModdedPassiveData Rearm
+	Rearm.Name = "#WPN_TITANABILITY_REARM"
+	Rearm.description = "#WPN_TITANABILITY_REARM_DESC"
+	Rearm.image = $"rui/titan_loadout/tactical/titan_tactical_rearm_menu"
+	Samurai.passive5Array.append(Rearm)
+	/*
 	ModdedPassiveData TetherTrap
 	TetherTrap.Name = "#WPN_TITAN_TETHER_TRAP"
 	TetherTrap.description = "WPN_TITAN_TETHER_TRAP_DESC"
 	TetherTrap.image = $"rui/titan_loadout/ordnance/tether_menu"
 	Samurai.passive5Array.append(TetherTrap)
-	/*
-	ModdedPassiveData IncendiaryTrap
-	IncendiaryTrap.Name = "#WPN_TITAN_SLOW_TRAP"
-	IncendiaryTrap.description = "WPN_TITAN_SLOW_TRAP_DESC"
-	IncendiaryTrap.image = $"rui/titan_loadout/tactical/titan_tactical_incendiary_menu"
-	Samurai.passive5Array.append(IncendiaryTrap)
 	*/
 	/*
 	ModdedPassiveData Hover
@@ -261,12 +219,11 @@ void function SamuraiSetup()
 	Samurai.passive5Array.append(Hover)
 	*/
 	/*
-	//Game chrashes when used with non Monarch abilities
-	ModdedPassiveData Rearm
-	Rearm.Name = "#WPN_TITANABILITY_REARM"
-	Rearm.description = "#WPN_TITANABILITY_REARM_DESC"
-	Rearm.image = $"rui/titan_loadout/tactical/titan_tactical_rearm_menu"
-	Samurai.passive5Array.append(Rearm)
+	ModdedPassiveData Siphon
+	Siphon.Name = "#WPN_TITAN_STUN_LASER"
+	Siphon.description = "WPN_TITAN_STUN_LASER_DESC"
+	Siphon.image = $"rui/titan_loadout/defensive/titan_defensive_energy_siphon_menu"
+	Samurai.passive5Array.append(Siphon)
 	*/
 	
 

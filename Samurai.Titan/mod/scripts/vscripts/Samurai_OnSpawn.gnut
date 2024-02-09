@@ -16,33 +16,11 @@ void function ApplySamuraiPassives( entity titan, TitanLoadoutDef loadout )
 		if (!(IsValid( soul )))
 			return
 
-		
-        //==================================================//SELECTABLE WEAPON (PASSIVE 2)//==================================================//
-		//Can not be active with Custom Titan Kit (same slot)
-		/*
-		if(SoulHasPassive( soul, ePassives["Predator Cannon"] ) )
-		{
-			titan.GiveWeapon("mp_titanweapon_predator_cannon" )
-        }
-		if(SoulHasPassive( soul, ePassives["XO16"] ) )
-		{
-			titan.GiveWeapon("mp_titanweapon_xo16_vanguard" )
-        }
-        if(SoulHasPassive( soul, ePassives["Leadwall"] ) )
-		{
-			titan.GiveWeapon("mp_titanweapon_leadwall" )
-        }
-        if(SoulHasPassive( soul, ePassives["Rocket launcher"] ) )
-		{
-			titan.GiveWeapon("mp_titanweapon_rocketeer_rocketstream" )
-        }
-		*/
-
-
 		//==================================================//CUSTOM TITAN KIT (PASSIVE 2)//==================================================//
 		//Not working
 		//Multipurpose mounts are the problem
 		//Every time entity null
+		//Probably fixable
 
 		//Examples
 		/*
@@ -140,22 +118,22 @@ void function ApplySamuraiPassives( entity titan, TitanLoadoutDef loadout )
 		{
 			titan.GiveOffhandWeapon("mp_titanability_basic_block", OFFHAND_LEFT )
 		}
-		
+		/*
 		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_HEAT_SHIELD"] ) )
 		{
 			titan.GiveOffhandWeapon("mp_titanweapon_heat_shield", OFFHAND_LEFT )
 		}
-		
+		*/
         if(SoulHasPassive( soul, ePassives["#WPN_TITAN_VORTEX_SHIELD"] ) )
 		{
 			titan.GiveOffhandWeapon("mp_titanweapon_vortex_shield_ion", OFFHAND_LEFT )
 		}
-		/*
+		
 		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_STUN_LASER"] ) )
 		{
 			titan.GiveOffhandWeapon("mp_titanweapon_stun_laser", OFFHAND_LEFT )
 		}
-		*/
+		
 
 		//==================================================//UTILITY (PASSIVE 5, MIDDLE)//==================================================//	
         
@@ -163,33 +141,28 @@ void function ApplySamuraiPassives( entity titan, TitanLoadoutDef loadout )
 		{
 			titan.GiveOffhandWeapon("mp_titanability_phase_dash", OFFHAND_ANTIRODEO )
 		}
-		
+		/*
         if(SoulHasPassive( soul, ePassives["#WPN_TITAN_STUN_LASER"] ) )
 		{
 			titan.GiveOffhandWeapon("mp_titanweapon_stun_laser", OFFHAND_ANTIRODEO )
 		}
+		/*
 		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_TETHER_TRAP"] ) )
 		{
 			titan.GiveOffhandWeapon("mp_titanability_tether_trap", OFFHAND_ANTIRODEO )
 		}
-		/*
-		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_SLOW_TRAP"] ) )
-		{
-			titan.GiveOffhandWeapon("mp_titanability_slow_trap", OFFHAND_ANTIRODEO )
-		}
-		*/
-		/*
+		
 		if(SoulHasPassive( soul, ePassives["#WPN_TITAN_HOVER"] ) )
 		{
 			titan.GiveOffhandWeapon("mp_titanability_hover", OFFHAND_ANTIRODEO )
 		}
 		*/
-		/*
+		
 		if(SoulHasPassive( soul, ePassives["#WPN_TITANABILITY_REARM"] ) )
 		{
 			titan.GiveOffhandWeapon("mp_titanability_rearm", OFFHAND_ANTIRODEO )
 		}
-		*/
+		
 
 		//==================================================//AEGIS UPGRADES//==================================================//
 		//When chassis swap is enabled, each Aegis Upgrades gets applied 3 times because of the 3 chassis (I think) results in a crash
