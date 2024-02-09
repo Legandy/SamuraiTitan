@@ -3,7 +3,7 @@
 	"Description": "Vanguard Titan equipped with a broadsword, sword core and multipurpose ability mounts.",
 	"LoadPriority": 5,
 	"RequiredOnClient": true,
-	"Version": "0.1.3",
+	"Version": "0.1.4",
 	"Scripts": 
 	[
 		{
