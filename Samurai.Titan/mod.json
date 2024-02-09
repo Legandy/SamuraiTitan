@@ -1,0 +1,39 @@
+{
+	"Name": "SamuraiTitan",
+	"Description": "Custom Titan equipped with a broadsword, sword core and multipurpose ability mounts.",
+	"LoadPriority": 5,
+	"RequiredOnClient": true,
+	"Version": "0.1.0",
+	"Scripts": 
+	[
+		{
+			"Path": "Samurai_CreateTitan.gnut",
+			"RunOn": "UI || SERVER || CLIENT",
+			"ServerCallback": 
+			{
+				"After": "SamuraiSetup"
+            },
+			
+			"ClientCallback": 
+			{
+				"After": "SamuraiSetup"
+			},
+			"UICallback": 
+			{
+				"After": "SamuraiSetup"
+			}
+		},
+		{
+			"Path": "Samurai_OnSpawn.gnut",
+			"RunOn": "SERVER",
+            "ServerCallback": 
+			{
+				"After": "SamuraiCallbacks"
+            }
+		}
+	],
+	"Localisation": 
+	[
+		"resource/Samurai_localisation_%language%.txt"
+	]
+}
