@@ -1,5 +1,6 @@
 # Samurai Titan
-![icon](https://github.com/user-attachments/assets/87f67669-ce5b-413f-a1ed-39c808fe35fe)
+![icon](https://github.com/user-attachments/assets/87f67669-ce5b-413f-a1ed-39c808fe35fe)![Samurai Logo_FullBlackBackground+Title](https://github.com/user-attachments/assets/9ae4f55d-c066-4edb-b5e5-a34d2cb75680)
+
 
 
 **Required by Server and Client**
