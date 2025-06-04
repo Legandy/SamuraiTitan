@@ -7,7 +7,7 @@
 ## Descritpion
 Implements a Vanguard Titan equipped with a broadsword and sword core. <br>
 Like BT in the trailer and the wallpaper.
-<p align="center"><img src= https://github.com/Legandy/SamuraiTitan/blob/main/assets%2FBT-Sword_300x300.png width="300" height="300">
+<p align="center"><img src=https://github.com/Legandy/SamuraiTitan/blob/main/assets/BT_Sword_1920x1080.png>
 
 
 ## Loadout
