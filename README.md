@@ -70,9 +70,9 @@ Like BT in the trailer and the wallpaper.
 
 ## Credits
 For help and code inspiration
-<a href="https://thunderstore.io/c/northstar/p/The_Peepeepoopoo_man/">The_Peepeepoopoo_man</a>
-<a href="https://thunderstore.io/c/northstar/p/GalacticMoblin/">Galactic Moblin</a>
-<a href="https://thunderstore.io/c/northstar/p/Dinorush/">Dinorush</a>
+- <a href="https://thunderstore.io/c/northstar/p/The_Peepeepoopoo_man/">The_Peepeepoopoo_man</a>
+- <a href="https://thunderstore.io/c/northstar/p/GalacticMoblin/">Galactic Moblin</a>
+- <a href="https://thunderstore.io/c/northstar/p/Dinorush/">Dinorush</a>
 
 
 ## Bugs
@@ -80,9 +80,9 @@ For help and code inspiration
 
 
 ## Feedback
-<a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report, you can tell me here.</a> <br>
-Or write me on Discord @thelegandy.
-Or on Github.
+- <a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report, you can tell me here.</a> <br>
+- Or write me on Discord @thelegandy.
+- Or on Github.
 
 ## Patch Notes
 
