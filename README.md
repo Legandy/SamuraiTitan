@@ -1,6 +1,9 @@
 # Samurai Titan
+![icon](https://github.com/user-attachments/assets/87f67669-ce5b-413f-a1ed-39c808fe35fe)
+
 
 **Required by Server and Client**
+
 
 ### Descritpion
 Implements a Vanguard Titan equipped with a broadsword and sword core. <br>
