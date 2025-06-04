@@ -1,5 +1,5 @@
 # Samurai Titan
-<p align="right"><img src= https://github.com/Legandy/SamuraiTitan/blob/main/assets%2FBT-Sword_300x300.png> <p align="left"><img src=(https://github.com/user-attachments/assets/9ae4f55d-c066-4edb-b5e5-a34d2cb75680) width="300" height="300">
+<p align="right"><img src= https://github.com/Legandy/SamuraiTitan/blob/main/assets%2FBT-Sword_300x300.png><p align="left"><img src=https://github.com/Legandy/SamuraiTitan/blob/main/assets%2FSamuraiLogo_Background%2BTitle_1000x1000.png width="300" height="300">
 
 
 
