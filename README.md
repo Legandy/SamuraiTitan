@@ -64,22 +64,26 @@ Like BT in the trailer and the wallpaper.
 
 
 ## Credits
-<a href="https://northstar.thunderstore.io/package/The_Peepeepoopoo_man/">The_Peepeepoopoo_man</a>
+For help and code inspiration
+<a href="https://thunderstore.io/c/northstar/p/The_Peepeepoopoo_man/">The_Peepeepoopoo_man</a>
+<a href="https://thunderstore.io/c/northstar/p/GalacticMoblin/">Galactic Moblin</a>
+<a href="https://thunderstore.io/c/northstar/p/Dinorush/">Dinorush</a>
 
 
 ## Bugs
-- None I guess
+- Aegis Upgrades do not work (game won't crash in FD but the upgrades don't get applied to the Titan)
 
 
 ## Feedback
 <a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report, you can tell me here.</a> <br>
-Or write me on discord @thelegandy.
+Or write me on Discord @thelegandy.
+Or on Github.
 
 ## Patch Notes
 
 ### 1.1.0
 - Mod works again
-- Aegis Upgrades work
+- Aegis Upgrades added (game won't crash in FD but the upgrades don't get applied to the Titan)
 
 ### 1.0.1
 - Added missing code for dependency check

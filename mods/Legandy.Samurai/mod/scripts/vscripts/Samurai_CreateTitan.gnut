@@ -10,7 +10,7 @@ void function SamuraiSetup()
 	Samurai.passiveDisplayNameOverride = "#TITAN_SAMURAI_PASSIVE_TITLE"
 	//Samurai.titanReadyMessageOverride = "#HUD_SAMURAI_READY"
 	//Samurai.icon = $"samurai/menu/samurai_icon_medium"
-	Samurai.Voice = "titanos_bt"
+	//Samurai.Voice = "titanos_bt"
 	Samurai.difficulty = 2
 	Samurai.speedStat = 3
 	Samurai.damageStat = 2
