@@ -12,7 +12,7 @@ void function SamuraiSetup()
 	//Samurai.titanReadyMessageOverride = "#HUD_SAMURAI_READY"
 	//Samurai.icon = $"samurai/menu/samurai_icon_medium"
 	//Samurai.Voice = "titanos_bt"
-	Samurai.Voice = "titanos_ronin"
+	//Samurai.Voice = "titanos_ronin"
 	Samurai.difficulty = 2
 	Samurai.speedStat = 3
 	Samurai.damageStat = 2
@@ -46,8 +46,8 @@ void function SamuraiSetup()
 
 	//==================================================//SIMPLE MOUNTS (PASSIVE 4,5,6)//==================================================//
 	ModdedTitanWeaponAbilityData Offensive 
-	//Offensive.weaponName = "mp_titanweapon_salvo_rockets" 		//Salvo Rockets
-	Offensive.weaponName = "mp_titanweapon_shoulder_rockets" 	//Guided Multi-Target-Missles
+	Offensive.weaponName = "mp_titanweapon_salvo_rockets" 		//Salvo Rockets
+	//Offensive.weaponName = "mp_titanweapon_shoulder_rockets" 	//Guided Multi-Target-Missles
     Samurai.Right = Offensive
     
     ModdedTitanWeaponAbilityData Defensive
