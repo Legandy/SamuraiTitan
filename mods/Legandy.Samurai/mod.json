@@ -1,9 +1,9 @@
 {
 	"Name": "SamuraiTitan",
 	"Description": "Vanguard Titan equipped with a broadsword and sword core.",
-	"LoadPriority": 5,
+	"LoadPriority": 52,
 	"RequiredOnClient": true,
-	"Version": "1.0.0",
+	"Version": "1.1.0",
 	"Scripts": 
 	[
 		{
@@ -19,13 +19,16 @@
 			"RunOn": "UI || SERVER || CLIENT"
 		},
 		{
-			
 			"Path": "Samurai_OnSpawn.gnut",
-			"RunOn": "SERVER",
-            "ServerCallback": 
+			"RunOn": "( CLIENT || SERVER ) && MP",
+			"ClientCallback": 
 			{
-				"After": "SamuraiCallbacks"
-            }
+				"After": "Samurai_Init"
+			},
+			"ServerCallback": 
+			{
+				"After": "Samurai_Init"
+			}
 			
 		},
 		{

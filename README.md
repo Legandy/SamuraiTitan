@@ -74,7 +74,7 @@ For help and code inspiration
 
 
 ## Bugs
-- Aegis Upgrades do not work (game won't crash in FD but the upgrades don't get applied to the Titan)
+- None I guess
 
 
 ## Feedback

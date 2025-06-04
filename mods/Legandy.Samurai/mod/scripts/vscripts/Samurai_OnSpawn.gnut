@@ -12,22 +12,8 @@ void function Samurai_Init()
 void function SetSamuraiTitanLoadout( entity titan, TitanLoadoutDef loadout  )
 {	
 	#if SERVER
-	/*
-	//Chimera
-	if( loadout.titanClass == "#SAMURAI")
-		return
 	
-		entity player = GetPetTitanOwner( titan )
-		entity soul = titan.GetTitanSoul()
-
-		if (!(IsValid( soul )))
-			return
-	*/
-
-	
-
-	//Dinorush Brute4
-	if( loadout.titanClass != "#SAMURAI")
+	if( loadout.titanClass != "#DEFAULT_TITAN_22")
 		return
 
 	entity soul = titan.GetTitanSoul()

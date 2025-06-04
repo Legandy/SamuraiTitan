@@ -4,6 +4,7 @@ void function SamuraiSetup()
     ModdedTitanData Samurai
     //Samurai.Name = "#DEFAULT_TITAN_SAMURAI" //results in #REJECTED idk
 	Samurai.Name = "#SAMURAI"
+	Samurai.Name = "#DEFAULT_TITAN_22"
     Samurai.Description = "#TITAN_LOADOUT_DESC_SAMURAI"
     Samurai.BaseSetFile = "titan_atlas_vanguard"
     Samurai.BaseName = "vanguard"
@@ -11,10 +12,12 @@ void function SamuraiSetup()
 	//Samurai.titanReadyMessageOverride = "#HUD_SAMURAI_READY"
 	//Samurai.icon = $"samurai/menu/samurai_icon_medium"
 	//Samurai.Voice = "titanos_bt"
+	Samurai.Voice = "titanos_ronin"
 	Samurai.difficulty = 2
 	Samurai.speedStat = 3
 	Samurai.damageStat = 2
 	Samurai.healthStat = 2
+	Samurai.fdRole = "#FD_ROLE_SAMURAI"
     Samurai.titanHints = 
     [
 		"#TITAN_HINT_SAMURAI_001"
