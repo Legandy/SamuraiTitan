@@ -1,0 +1,297 @@
+global function SamuraiSetup
+void function SamuraiSetup()
+{
+    ModdedTitanData Samurai
+    //Samurai.Name = "#DEFAULT_TITAN_SAMURAI" //results in #REJECTED idk
+	Samurai.Name = "#SAMURAI"
+    Samurai.Description = "#TITAN_LOADOUT_DESC_SAMURAI"
+    Samurai.BaseSetFile = "titan_atlas_vanguard"
+    Samurai.BaseName = "vanguard"
+	Samurai.passiveDisplayNameOverride = "#TITAN_SAMURAI_PASSIVE_TITLE"
+	//Samurai.titanReadyMessageOverride = "#HUD_SAMURAI_READY"
+	//Samurai.icon = $"samurai/menu/samurai_icon_medium"
+	Samurai.Voice = "titanos_bt"
+	Samurai.difficulty = 2
+	Samurai.speedStat = 3
+	Samurai.damageStat = 2
+	Samurai.healthStat = 2
+    Samurai.titanHints = 
+    [
+		"#TITAN_HINT_SAMURAI_001"
+		"#TITAN_HINT_SAMURAI_002"
+		"#TITAN_HINT_SAMURAI_003"
+    ]
+	
+	/*
+	#if UI
+	Samurai.loadoutsMenuControllerFunc = SamuraiPreviewController
+	#endif
+	*/
+	
+	//==================================================//DEFINING WEAPON//==================================================//
+    ModdedTitanWeaponAbilityData Primary
+    Primary.weaponName = "mp_titanweapon_xo16_vanguard"
+    Samurai.Primary = Primary
+
+	//==================================================//DEFINING MELEE//==================================================//
+    Samurai.Melee = "melee_titan_sword"
+
+	//==================================================//CORE ABILITY//==================================================//
+	ModdedTitanWeaponAbilityData Core
+    Core.weaponName = "mp_titancore_shift_core"
+    Samurai.Core = Core
+
+	//==================================================//SIMPLE MOUNTS (PASSIVE 4,5,6)//==================================================//
+	ModdedTitanWeaponAbilityData Offensive 
+	//Offensive.weaponName = "mp_titanweapon_salvo_rockets" 		//Salvo Rockets
+	Offensive.weaponName = "mp_titanweapon_shoulder_rockets" 	//Guided Multi-Target-Missles
+    Samurai.Right = Offensive
+    
+    ModdedTitanWeaponAbilityData Defensive
+    Defensive.weaponName = "mp_titanability_basic_block"
+	//Defensive.weaponName = "mp_titanweapon_vortex_shield_ion" 
+	//Defensive.weaponName = "mp_titanability_stun_laser"
+    Samurai.Left = Defensive
+
+    ModdedTitanWeaponAbilityData Util
+    Util.weaponName = "mp_titanability_phase_dash" 
+    Samurai.Mid = Util
+
+
+
+	//==================================================//TITAN KIT (PASSIVE 2)//==================================================//
+	ModdedPassiveData blank
+    Samurai.passive2Array.append(blank)
+	//Samurai.passiveFDArray.append(blank)
+
+	//--------------------//Samurai_OnSpawn.gnut version//----------------------------//
+	//deprecated
+	/*
+	ModdedPassiveData EnergyThief
+	EnergyThief.Name = "#GEAR_VANGUARD_ENERGYTHIEF"
+	EnergyThief.description = "#GEAR_VANGUARD_ENERGYTHIEF_LONGDESC"
+	EnergyThief.image = $"ui/temp"
+	EnergyThief.customIcon = false
+	Samurai.passive2Array.append(EnergyThief)
+	*/
+	/*
+	ModdedPassiveData Rearm
+	Rearm.Name = "#GEAR_VANGUARD_REARM"
+	Rearm.description = "#GEAR_VANGUARD_REARM_LONGDESC"
+	Rearm.image = $"rui/titan_loadout/tactical/titan_tactical_phase_rearm_menu"
+	Rearm.customIcon = false
+	Samurai.passive2Array.append(Rearm)
+	*/
+	/*
+	ModdedPassiveData Highlander
+	Highlander.Name = "#GEAR_RONIN_HIGHLANDER"
+	Highlander.description = "#GEAR_RONIN_HIGHLANDER_LONGDESC"
+	Highlander.image = $"r2_ui/menus/loadout_icons/titan_weapon/titan_weapon_sword"
+	Highlander.customIcon = false
+	Samurai.passive2Array.append(Highlander)
+	
+	
+	ModdedPassiveData TemporalAnomaly
+	TemporalAnomaly.Name = "#GEAR_RONIN_TEMPORALANOMALY"
+	TemporalAnomaly.description = "#GEAR_RONIN_TEMPORALANOMALY_LONGDESC"
+	TemporalAnomaly.image = $"rui/titan_loadout/tactical/titan_tactical_phase_dash_menu"
+	TemporalAnomaly.customIcon = false
+	Samurai.passive2Array.append(TemporalAnomaly)
+	*/
+	
+	/*
+	ModdedPassiveData Thunderstorm
+	Thunderstorm.Name = "#GEAR_RONIN_THUNDERSTORM"
+	Thunderstorm.description = "#GEAR_RONIN_THUNDERSTORM_LONGDESC"
+	Thunderstorm.image = $"rui/titan_loadout/ordnance/arc_wave_menu"
+	Thunderstorm.customIcon = false
+	Samurai.passive2Array.append(Thunderstorm)
+	/*
+	ModdedPassiveData ShieldAmplifier
+	ShieldAmplifier.Name = "#GEAR_VANGUARD_SHIELDAMPLIFIER"
+	ShieldAmplifier.description = "#GEAR_VANGUARD_SHIELDAMPLIFIER_LONGDESC"
+	ShieldAmplifier.image = $"ui/temp"
+	ShieldAmplifier.customIcon = false
+	Samurai.passive2Array.append(ShieldAmplifier)
+	*/
+	
+
+	//--------//Samurai_ValidationFunctions.gnut version//---------//
+
+	CustomPersistentVar passive2
+    passive2.property = "passive2"
+    passive2.defaultValue = "pas_vanguard_coremeter"
+    passive2.passiveItemsMethod = eItemsMethod.FIND_FORCE
+    passive2.validationFunc = validSamuraiPassive2
+    passive2.itemTypeOverride = eItemTypes.TITAN_VANGUARD_PASSIVE
+    Samurai.ValidationOverrides["passive2"] <- passive2
+
+    ModdedPassiveData TemporalAnomaly
+    TemporalAnomaly.Name = "pas_ronin_phase"
+    Samurai.ValidationOverrides["passive2"].acceptedItems.append(TemporalAnomaly)
+	
+	ModdedPassiveData Highlander
+    Highlander.Name = "pas_ronin_swordcore"
+    Samurai.ValidationOverrides["passive2"].acceptedItems.append(Highlander)
+
+    ModdedPassiveData EnergyThief
+    EnergyThief.Name = "pas_vanguard_coremeter"
+    Samurai.ValidationOverrides["passive2"].acceptedItems.append(EnergyThief)
+
+	/*
+	ModdedPassiveData Rearm
+    Rearm.Name = "pas_vanguard_rearm"
+    Samurai.ValidationOverrides["passive2"].acceptedItems.append(Rearm)
+	*/
+	/*
+    ModdedPassiveData VortexAmp
+    VortexAmp.Name = "pas_ion_vortex"
+    Samurai.ValidationOverrides["passive2"].acceptedItems.append(VortexAmp)
+	*/
+	/*
+	ModdedPassiveData ShieldAmplifier
+    ShieldAmplifier.Name = "pas_vanguard_shield"
+    Samurai.ValidationOverrides["passive2"].acceptedItems.append(ShieldAmplifier)
+	*/
+
+
+	//==================================================//AEGIS RANKS//==================================================//
+
+	//---------------------//Samurai_OnSpawn.gnut version//------------------//
+	//looks like it works but the upgrades doesn't get applied
+	
+	//RANK 1: Sword Mastery
+	ModdedPassiveData SwordMastery
+	SwordMastery.Name = "#FD_UPGRADE_SAMURAI_WEAPON_TIER_1"
+	SwordMastery.description = "#FD_UPGRADE_SAMURAI_WEAPON_TIER_1_DESC"
+	SwordMastery.image = $"rui/menu/fd_menu/upgrade_ronin_weapon_tier_1"
+	//SwordMastery.image = $"r2_ui/menus/loadout_icons/titan_weapon/titan_weapon_sword"
+	//SwordMastery.image = $"rui/menu/fd_menu/upgrade_ronin_sword_upgrade"
+	SwordMastery.customIcon = false
+	Samurai.passiveFDArray.append(SwordMastery)
+	
+	//RANK 2: Chassis Upgrade
+	ModdedPassiveData ChassisUpgrade
+	ChassisUpgrade.Name = "#FD_UPGRADE_SAMURAI_DEFENSE_TIER_1"
+	ChassisUpgrade.description = "#FD_UPGRADE_SAMURAI_DEFENSE_TIER_1_DESC"
+	ChassisUpgrade.image = $"rui/menu/fd_menu/upgrade_monarch_chassis"
+	ChassisUpgrade.customIcon = false
+	Samurai.passiveFDArray.append(ChassisUpgrade)
+
+	//RANK 3: Energized Smoke Level 1
+	ModdedPassiveData EnergizedSmoke
+	EnergizedSmoke.Name = "#FD_UPGRADE_SAMURAI_UTILITY_TIER_1"
+	EnergizedSmoke.description = "#FD_UPGRADE_SAMURAI_UTILITY_TIER_1_DESC"
+	EnergizedSmoke.image = $"rui/menu/fd_menu/upgrade_monarch_utility_tier_1"
+	//EnergizedSmoke.image = $"rui/menu/fd_menu/upgrade_vanguard_utility_tier_1"
+	//EnergizedSmoke.image = $"rui/titan_loadout/tactical/titan_tactical_electric_smoke_menu"
+	EnergizedSmoke.customIcon = false
+	Samurai.passiveFDArray.append(EnergizedSmoke)
+	
+	//RANK 4: XO-16: Critical Hit
+	ModdedPassiveData XO16CriticalHit
+	XO16CriticalHit.Name = "#FD_UPGRADE_SAMURAI_WEAPON_TIER_2"
+	XO16CriticalHit.description = "#FD_UPGRADE_SAMURAI_WEAPON_TIER_2_DESC"
+	XO16CriticalHit.image = $"rui/menu/fd_menu/upgrade_monarch_weapon_tier_2"
+	//XO16CriticalHit.image = $"rui/menu/fd_menu/upgrade_vanguard_weapon_tier_2"
+	//XO16CriticalHit.image = $"r2_ui/menus/loadout_icons/titan_weapon/titan_weapon_xo16"
+	//XO16CriticalHit.image = $"rui/menu/fd_menu/upgrade_vanguard_weapon_2"
+	XO16CriticalHit.customIcon = false
+	Samurai.passiveFDArray.append(XO16CriticalHit)
+	
+	//RANK 5: Shield Upgrade
+	ModdedPassiveData ShieldUpgrade
+	ShieldUpgrade.Name = "#FD_UPGRADE_SAMURAI_DEFENSE_TIER_2"
+	ShieldUpgrade.description = "#FD_UPGRADE_SAMURAI_DEFENSE_TIER_2_DESC"
+	ShieldUpgrade.image = $"rui/menu/fd_menu/upgrade_monarch_shield"
+	ShieldUpgrade.customIcon = false
+	Samurai.passiveFDArray.append(ShieldUpgrade)
+
+	//RANK 6: Energized Smoke Level 2
+	ModdedPassiveData EnergizedSmoke2
+	EnergizedSmoke2.Name = "#FD_UPGRADE_SAMURAI_UTILITY_TIER_2"
+	EnergizedSmoke2.description = "#FD_UPGRADE_SAMURAI_UTILITY_TIER_2_DESC"
+	EnergizedSmoke2.image = $"rui/menu/fd_menu/upgrade_monarch_utility_tier_2"
+	//EnergizedSmoke2.image = $"rui/menu/fd_menu/upgrade_vanguard_utility_tier_2"
+	//EnergizedSmoke2.image = $"rui/titan_loadout/tactical/titan_tactical_electric_smoke_menu"
+	//EnergizedSmoke2ES.image = $"rui/titan_loadout/tactical/titan_tactical_electric_smoke"
+	EnergizedSmoke2.customIcon = false
+	Samurai.passiveFDArray.append(EnergizedSmoke2)
+	
+	//RANK 7: Blademaster
+	ModdedPassiveData Blademaster
+	Blademaster.Name = "#FD_UPGRADE_SAMURAI_ULTIMATE"
+	Blademaster.description = "#FD_UPGRADE_SAMURAI_ULTIMATE_DESC"
+	Blademaster.image = $"rui/menu/fd_menu/upgrade_ronin_ultimate"
+	//Blademaster.image = $"r2_ui/menus/loadout_icons/titan_weapon/titan_weapon_sword"
+	//Blademaster.image = $"rui/menu/fd_menu/upgrade_ronin_duration"
+	Blademaster.customIcon = false
+	Samurai.passiveFDArray.append(Blademaster)
+	
+
+
+
+	//------------------//Samurai_ValidationFunctions.gnut version//-------------------------//
+	//not tested
+	/*
+	//old
+	CustomPersistentVar passiveFD
+    passiveFD.property = "passiveFD"
+    //passiveFD.defaultValue = "pas_ronin_phase"
+    passiveFD.passiveItemsMethod = eItemsMethod.FIND_ALL_TYPE
+	//passiveFD.passiveItemsMethod = eItemsMethod.FIND_FORCE
+    //passiveFD.validationFunc = validSamuraipassiveFD
+    passiveFD.itemTypeOverride = eItemTypes.TITAN_VANGUARD_PASSIVE
+    Samurai.ValidationOverrides["passiveFD"] <- passiveFD
+	*/
+	/*
+	CustomPersistentVar passiveFD
+    passiveFD.property = "passiveFD"
+    passiveFD.passiveItemsMethod = eItemsMethod.FIND_FORCE
+    passiveFD.validationFunc = validSamuraiPassiveFD
+    //passiveFD.itemTypeOverride = eItemTypes.TITAN_VANGUARD_PASSIVE
+	passiveFD.itemTypeOverride = eItemTypes.TITAN_FD_UPGRADE
+    Samurai.ValidationOverrides["passiveFD"] <- passiveFD
+
+	//RANK 1: SwordMastery
+	ModdedPassiveData SwordMastery
+    SwordMastery.Name = "fd_sword_upgrade"
+    Samurai.ValidationOverrides["passiveFD"].acceptedItems.append(SwordMastery)
+	
+	//RANK 2: ChassisUpgrade
+	ModdedPassiveData ChassisUpgrade
+    ChassisUpgrade.Name = "fd_health_upgrade"
+    Samurai.ValidationOverrides["passiveFD"].acceptedItems.append(ChassisUpgrade)
+
+	//RANK 3: ENERGIZEDSMOKE1
+	ModdedPassiveData ENERGIZEDSMOKE1
+    ENERGIZEDSMOKE1.Name = "fd_vanguard_utility_1"
+    Samurai.ValidationOverrides["passiveFD"].acceptedItems.append(ENERGIZEDSMOKE1)
+
+	//RANK 4: XO16CriticalHit
+	ModdedPassiveData XO16CriticalHit
+    XO16CriticalHit.Name = "fd_vanguard_weapon_2"
+    Samurai.ValidationOverrides["passiveFD"].acceptedItems.append(XO16CriticalHit)
+
+	/*
+	//RANK 5: ShieldUpgrade
+	float titanShieldHealth = GetTitanSoulShieldHealth( soul )
+    soul.SetShieldHealthMax( int( titanShieldHealth * 1.5 ) )
+	
+
+	//RANK 6: ENERGIZEDSMOKE2
+	ModdedPassiveData ENERGIZEDSMOKE2
+    ENERGIZEDSMOKE2.Name = "fd_vanguard_utility_2"
+    Samurai.ValidationOverrides["passiveFD"].acceptedItems.append(ENERGIZEDSMOKE2)
+
+	//RANK 7: Blademaster
+	ModdedPassiveData Blademaster
+    Blademaster.Name = "fd_duration"
+    Samurai.ValidationOverrides["passiveFD"].acceptedItems.append(Blademaster)
+	*/
+	
+
+	//Vanguard
+	CreateModdedTitanSimple(Samurai)
+
+}

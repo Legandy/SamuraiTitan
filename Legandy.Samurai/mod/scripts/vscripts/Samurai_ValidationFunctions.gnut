@@ -1,0 +1,36 @@
+globalize_all_functions //Collection of all custom validation functions for Samurais loadouts
+/*
+
+Framework has a few pre-defined validation functions, but they are not sufficient for the Samurai loadout system.
+Its possible that for your titans they will suffice:
+
+ValidPersistentPassiveForLoadout - Compares item types, will work for any passive created using eItemsMethod.CREATE or eItemsMethod.FIND_ALL_TYPE unless you have additional requirements
+ValidDecalProperty - Checks if the decal exists on the BASE titan
+ValidSkinCamoPair - does Something? its mostly copied from basegame, but it works
+propertyDoesNotRequireValidation - Returns true, used for properties that do not require validation
+*/
+
+//==================================================//TITAN KIT (PASSIVE 2)//==================================================//
+
+bool function validSamuraiPassive2( string value, string property, TitanLoadoutDef validatedLoadout )
+{
+    switch(value)
+    {
+        case "pas_ronin_phase":
+        case "pas_ronin_swordcore":
+        case "pas_vanguard_coremeter": 
+        //case "pas_ion_vortex":
+        //case "pas_vanguard_shield":
+          
+            return true
+        default:
+            return false
+    }
+    return false
+}
+/*
+bool function validSamuraiPassiveFD( string value, string property, TitanLoadoutDef validatedLoadout )
+{
+    
+}
+*/

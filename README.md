@@ -4,7 +4,7 @@
 
 ### Descritpion
 Implements a Vanguard Titan equipped with a broadsword and sword core. <br>
-Mostly desinged for fun.
+Like BT in the trailer and the wallpaper.
 
 
 ## Loadout
@@ -32,7 +32,7 @@ Mostly desinged for fun.
 - Energy Thief (Monarch)
 
 
-### Aegis Upgrades (not working)
+### Aegis Upgrades
 **Aegis Upgrade 1**
 - Sword Mastery (Ronin Upgrade 1) <br>
 -> Melee attacks deal more damage.
@@ -68,14 +68,22 @@ Mostly desinged for fun.
 
 
 ## Bugs
-- Titan Edit in Aegis Game Modes will crash the game because of no Aegis Upgrades
+- None I guess
 
 
 ## Feedback
 <a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report, you can tell me here.</a> <br>
-
+Or write me on discord @thelegandy.
 
 ## Patch Notes
+
+### 1.1.0
+- Mod works again
+- Aegis Upgrades work
+
+### 1.0.1
+- Added missing code for dependency check
+
 ### 1.0.0
 - Titan Kit added
 - Aegis Upgrades deactivated (they didn't work)

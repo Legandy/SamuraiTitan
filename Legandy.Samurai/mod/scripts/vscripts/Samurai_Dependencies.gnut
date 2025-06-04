@@ -22,29 +22,25 @@ void function Samurai_CreateDependencyDialog( string mod, string dependency, str
     file.currentDependency = dependency
     file.currentURL = url
     DialogData dialogData
+    dialogData.forceChoice = true
     dialogData.header = Localize("#MISSING_DEPENDENCY_HEADER")
+    dialogData.image = $"ui/menu/common/dialog_error"
 
-    array<string> mods = NSGetModNames()
+    array<ModInfo> mods = NSGetModInformation(dependency)
     // mod is installed but disabled
-    if ( mods.contains( dependency ) && !NSIsModEnabled( dependency ) )
+    if ( mods.len() > 0 )
     {
         dialogData.message = Localize( "#MISSING_DEPENDENCY_BODY_DISABLED", mod, dependency )
-
-	    AddDialogButton( dialogData, Localize("#ENABLE_MOD", dependency), Samurai_EnableMod )
-        AddDialogButton( dialogData, Localize("#DISABLE_MOD", mod), Samurai_DisableMod )
-        AddDialogFooter( dialogData, "#A_BUTTON_SELECT" )
-	    AddDialogFooter( dialogData, "#B_BUTTON_BACK" )
+        AddDialogButton( dialogData, Localize("#ENABLE_MOD", dependency), Samurai_EnableMod )
     }
     else
     {
         dialogData.message = Localize( "#MISSING_DEPENDENCY_BODY_INSTALL", mod, dependency, url )
-
-	    AddDialogButton( dialogData, "#OPEN_THUNDERSTORE", Samurai_InstallMod )
-        AddDialogButton( dialogData, Localize("#DISABLE_MOD", mod), Samurai_DisableMod )
-        AddDialogFooter( dialogData, "#A_BUTTON_SELECT" )
-	    AddDialogFooter( dialogData, "#B_BUTTON_BACK" )
+        AddDialogButton( dialogData, "#OPEN_THUNDERSTORE", Samurai_InstallMod )
     }
 
+    AddDialogButton( dialogData, Localize("#DISABLE_MOD", mod), Samurai_DisableMod )
+    AddDialogFooter( dialogData, "#A_BUTTON_SELECT" )
 	OpenDialog( dialogData )
 }
 
