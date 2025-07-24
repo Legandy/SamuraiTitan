@@ -78,6 +78,5 @@ For help and code inspiration
 
 
 ## Feedback
-- <a href="https://forms.gle/n4FesmAWMDcWWUEf8">You would like to submit suggestions, a bug report, you can tell me here.</a> <br>
-- Or write me on Discord @thelegandy.
+- Write me on Discord @thelegandy.
 - Or on Github.
