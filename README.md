@@ -1,5 +1,5 @@
 # Samurai Titan
-<p align="center"><img src=https://github.com/Legandy/SamuraiTitan/blob/main/assets%2FSamuraiLogo_Background%2BTitle_1000x1000.png width="300" height="300">
+<p align="center"><img src="https://raw.githubusercontent.com/Legandy/SamuraiTitan/main/assets/SamuraiLogo_Background%2BTitle_1000x1000.png" width="300" height="300">
 
 **Required by Server and Client**
 
@@ -7,7 +7,7 @@
 ## Descritpion
 Implements a Vanguard Titan equipped with a broadsword and sword core. <br>
 Like BT in the trailer and the wallpaper.
-<p align="center"><img src=https://github.com/Legandy/SamuraiTitan/blob/main/assets/BT_Sword_720p.png width="512" height="288">
+<p align="center"><img src="https://raw.githubusercontent.com/Legandy/SamuraiTitan/main/assets/BT_Sword_720p.png" width="512" height="288">
 
 
 ## Loadout

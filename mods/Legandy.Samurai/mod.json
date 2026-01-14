@@ -3,7 +3,7 @@
 	"Description": "Vanguard Titan equipped with a broadsword and sword core.",
 	"LoadPriority": 52,
 	"RequiredOnClient": true,
-	"Version": "1.1.0",
+	"Version": "1.2.0",
 	"Scripts": 
 	[
 		{

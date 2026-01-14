@@ -1,11 +1,11 @@
 {
     "name": "SamuraiTitan",
-    "version_number": "1.1.0",
+    "version_number": "1.2.0",
     "website_url": "https://github.com/Legandy/SamuraiTitan",
     "description": "Vanguard Titan equipped with a broadsword and sword core. Like BT in the wallpaper.",
     "dependencies": 
     [
-        "northstar-Northstar-1.30.2",
+        "northstar-Northstar-1.31.3",
         "The_Peepeepoopoo_man-Titanframework-2.4.3"
     ]
 }

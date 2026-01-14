@@ -1,3 +1,6 @@
+### 1.2.0
+Fixed dependency error
+
 ### 1.1.0
 - Mod works again
 - Aegis Upgrades work
