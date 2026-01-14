@@ -46,7 +46,7 @@ void function Samurai_CreateDependencyDialog( string mod, string dependency, str
 
 void function Samurai_EnableMod()
 {
-    NSSetModEnabled( file.currentDependency, true )
+    NSSetModEnabled( file.currentDependency, NSGetModInformation(file.currentDependency)[0].version, true )
     ReloadMods()
 }
 
@@ -58,6 +58,7 @@ void function Samurai_InstallMod()
 
 void function Samurai_DisableMod()
 {
-    NSSetModEnabled( file.currentMod, false )
+    array<ModInfo> mods = NSGetModInformation( file.currentMod )
+    foreach ( ModInfo mod in mods ){ NSSetModEnabled( file.currentMod, mod.version, false ) }
     ReloadMods()
 }
