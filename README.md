@@ -78,5 +78,4 @@ For help and code inspiration
 
 
 ## Feedback
-- Write me on Discord @thelegandy.
-- Or on Github.
+- Github
