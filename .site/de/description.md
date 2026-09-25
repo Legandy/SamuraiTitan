@@ -7,7 +7,7 @@
 ## BESCHREIBUNG
 Implementiert einen Vanguard-Titan, der mit einem Breitschwert und einem Schwertkern ausgerüstet ist. <br>
 Wie der BT im Trailer und auf dem Hintergrundbild.
-<p align="center"><img src="https://raw.githubusercontent.com/Legandy/SamuraiTitan/main/.site/cover.jpg" width="512" height="288">
+<p align="center"><img src="https://raw.githubusercontent.com/Legandy/SamuraiTitan/main/.site/cover.png" width="512" height="288">
 
 
 ## AUSRÜSTUNG
