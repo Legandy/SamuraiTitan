@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: Trigger website rebuild
         env:
-          DEPLOY_HOOK: ${{ https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/a432a173-afb1-4f56-bb5c-9a3e3c555a7d }}
+          DEPLOY_HOOK: ${{https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/a432a173-afb1-4f56-bb5c-9a3e3c555a7d}}
         run: curl -fsS -X POST "$DEPLOY_HOOK"
