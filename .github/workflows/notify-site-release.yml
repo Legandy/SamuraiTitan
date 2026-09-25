@@ -1,12 +1,12 @@
 name: Notify website of release
 on:
-  release:
-    types: [published, edited, deleted]
+  push:
+    branches: [ main ]
 jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger website rebuild
         env:
-          DEPLOY_HOOK: ${{https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/a432a173-afb1-4f56-bb5c-9a3e3c555a7d}}
+          DEPLOY_HOOK: ${{ secrets.LEGANDYWEB_DEPLOY_HOOK }}
         run: curl -fsS -X POST "$DEPLOY_HOOK"
