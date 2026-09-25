@@ -1,41 +1,44 @@
 # Titanfall 2 - Samurai Titan Mod
 <p align="center"><img src="https://raw.githubusercontent.com/Legandy/SamuraiTitan/main/.site/icon.png" width="300" height="300">
 
+
+## Downloads:
+[Thunderstore][ts]
+
 **Erforderlich für Server und Client**
 
-
-## BESCHREIBUNG
+## Beschreibung:
 Implementiert einen Vanguard-Titan, der mit einem Breitschwert und einem Schwertkern ausgerüstet ist. <br>
 Wie der BT im Trailer und auf dem Hintergrundbild.
 <p align="center"><img src="https://raw.githubusercontent.com/Legandy/SamuraiTitan/main/.site/cover.png" width="512" height="288">
 
 
-## AUSRÜSTUNG
+## Ausrüstung:
 ### WAFFE:
 - XO-16-Maschinengewehr
 
 
-### KERN:
+### Kern:
 - Schwertkern
 
 
-### OFFENSIVE BEFESTIGUNG:
+### Offensive Befestigung:
 - Salvo-Raketen (Monarch)
 
-### VERTEIDIGUNGS-AUSRÜSTUNG:
+### Verteidigungs-Ausrüstung:
 - Schwertblock (Ronin)
 
-### HILFS-AUSRÜSTUNG:
+### Hilfs-Ausrüstung:
 - Phasensprung (Ronin)
 
 
-### TITAN-KIT
+### Titan-Kit:
 - Zeitanomalie (Ronin)
 - Highlander (Ronin)
 - Energiedieb (Monarch)
 
 
-### AEGIS-UPGRADE
+### Aegis-Upgrade
 **AEGIS-UPGRADE 1**
 - Schwertbeherrschung (Ronin-Upgrade 1) <br>
 -> Nahkampfangriffe verursachen mehr Schaden.
@@ -65,18 +68,19 @@ Wie der BT im Trailer und auf dem Hintergrundbild.
 -> Angriffe mit dem Schwertkern erzeugen einen Schild. Die Dauer des Kerns wird verdoppelt.
 
 
-## DANK
+## Danke:
 Für Hilfe und Inspiration beim Programmieren
 - <a href="https://thunderstore.io/c/northstar/p/The_Peepeepoopoo_man/">The_Peepeepoopoo_man</a>
 - <a href="https://thunderstore.io/c/northstar/p/GalacticMoblin/">Galactic Moblin</a>
 - <a href="https://thunderstore.io/c/northstar/p/Dinorush/">Dinorush</a>
 
 
-## FEHLER
+## Fehler:
 - Keine, glaube ich
 
 
-## FEEDBACK
+## Feedback:
 - Github
 
-Übersetzt mit DeepL.com (kostenlose Version)
+
+[ts]: https://northstar.thunderstore.io/package/Legandy/SamuraiTitan/

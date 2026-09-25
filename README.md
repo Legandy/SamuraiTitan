@@ -1,41 +1,45 @@
 # Titanfall 2 - Samurai Titan Mod
 <p align="center"><img src="https://raw.githubusercontent.com/Legandy/SamuraiTitan/main/.site/icon.png" width="300" height="300">
 
+
+## Downloads:
+[Thunderstore][ts]
+
 **Required by Server and Client**
 
 
-## DESCRIPTION
+## Description:
 Implements a Vanguard Titan equipped with a broadsword and sword core. <br>
 Like BT in the trailer and the wallpaper.
 <p align="center"><img src="https://raw.githubusercontent.com/Legandy/SamuraiTitan/main/.site/cover.png" width="512" height="288">
 
 
-## LOADOUT
-### WEAPON:
+## Loadout:
+### Weapon:
 - XO-16 Chaingun
 
 
-### CORE:
+### Core:
 - Sword Core
 
 
-### OFFENSIVE MOUNT:
+### Offensive Mount:
 - Salvo Rockets (Monarch)
 
-### DEFENSIVE MOUNT:
+### Defensive Mount:
 - Sword Block (Ronin)
 
-### UTILITY MOUNT:
+### Utility Mount:
 - Phase Dash (Ronin)
 
 
-### TITAN KIT
+### Titan Kit:
 - Temporal Anomaly (Ronin)
 - Highlander (Ronin)
 - Energy Thief (Monarch)
 
 
-### AEGIS UPGRADE
+### Aegis Upgrade:
 **AEGIS UPGRADE 1**
 - Sword Mastery (Ronin Upgrade 1) <br>
 -> Melee attacks deal more damage.
@@ -65,16 +69,19 @@ Like BT in the trailer and the wallpaper.
 -> Sword Core attacks generate shield. Core's duration is doubled.
 
 
-## SPEICAL THANKS
+## Special Thanks:
 For help and code inspiration
 - <a href="https://thunderstore.io/c/northstar/p/The_Peepeepoopoo_man/">The_Peepeepoopoo_man</a>
 - <a href="https://thunderstore.io/c/northstar/p/GalacticMoblin/">Galactic Moblin</a>
 - <a href="https://thunderstore.io/c/northstar/p/Dinorush/">Dinorush</a>
 
 
-## BUGS
+## Bugs:
 - None I guess
 
 
-## FEEDBACK
+## Feedback:
 - Github
+
+
+[ts]: https://northstar.thunderstore.io/package/Legandy/SamuraiTitan/
