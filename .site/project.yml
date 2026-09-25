@@ -1,0 +1,9 @@
+type: mod                 # mod | game
+status: released          # released | beta | coming_soon | archived
+gameName: "Titanfall 2"
+gameVersions: "1.2 – 2.0"
+modLoader: ""             # e.g. a mod manager or framework name, if any
+distribution:
+  - channel: tunderstore
+    url: "https://northstar.thunderstore.io/package/Legandy/SamuraiTitan/"
+  # github_release is added automatically once this repo has a release

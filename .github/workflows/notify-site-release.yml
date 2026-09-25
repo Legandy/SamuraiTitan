@@ -1,0 +1,12 @@
+name: Notify website of release
+on:
+  release:
+    types: [published, edited, deleted]
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger website rebuild
+        env:
+          DEPLOY_HOOK: ${{ secrets.WEBSITE_DEPLOY_HOOK }}
+        run: curl -fsS -X POST "$DEPLOY_HOOK"
