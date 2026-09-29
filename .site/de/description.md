@@ -1,5 +1,5 @@
 # Titanfall 2 - Samurai Titan Mod
-<p align="center"><img src="https://raw.githubusercontent.com/Legandy/SamuraiTitan/main/.site/icon.png" width="300" height="300">
+![Icon](https://raw.githubusercontent.com/Legandy/SamuraiTitan/main/.site/icon.jpg)
 
 
 ## Downloads:
